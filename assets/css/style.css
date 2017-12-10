@@ -56,13 +56,17 @@ h1.icon.big{
 
 /* Abschnitte */
 
-.section{
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#015799+0,0b96d5+100 */
+body{
   background: #015799; /* Old browsers */
   background: -moz-linear-gradient(left, #015799 0%, #0b96d5 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left, #015799 0%,#0b96d5 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #015799 0%,#0b96d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#015799', endColorstr='#0b96d5',GradientType=1 ); /* IE6-9 */
+}
+
+.section{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#015799+0,0b96d5+100 */
+  background-color: none;
 }
 
 
@@ -71,8 +75,7 @@ h1.icon.big{
   background-size: contain;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
-  background-image: url(../img/dotswhite_sofa.png),
-  linear-gradient(to right, #015799 0%,#0b96d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+  background-image: url(../img/dotswhite_sofa.png); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
 }
 
 .content{
