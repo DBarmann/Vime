@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="101px" viewBox="0 0 102 101" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 89.6243333 0 0.291666667 89.3331667 0.291666667 89.3331667 89.6243333"></polygon>
+    </defs>
+    <g id="Desktop_home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1150.000000, -517.000000)">
+        <g id="Page-1" transform="translate(1150.000000, 517.000000)">
+            <g id="Group-3">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M44.6665,0.291 C19.9831667,0.291 -0.000166666667,20.291 -0.000166666667,44.9576667 C-0.000166666667,69.6243333 19.9831667,89.6243333 44.6665,89.6243333 C69.3331667,89.6243333 89.3331667,69.6243333 89.3331667,44.9576667 C89.3331667,20.291 69.3331667,0.291 44.6665,0.291 M44.6665,6.95766667 C65.6198333,6.95766667 82.6665,24.0043333 82.6665,44.9576667 C82.6665,65.911 65.6198333,82.9576667 44.6665,82.9576667 C23.7131667,82.9576667 6.6665,65.911 6.6665,44.9576667 C6.6665,24.0043333 23.7131667,6.95766667 44.6665,6.95766667" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            </g>
+            <path d="M75,74 L100,99" id="Stroke-4" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

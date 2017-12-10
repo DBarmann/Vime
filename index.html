@@ -6,42 +6,21 @@
 	<title>Vime - Home</title>
 	<meta name="author" content="Alvaro Trigo Lopez" />
 	<meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website." />
-	<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple" />
+	<meta name="keywords" content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple" />
 	<meta name="Resource-type" content="Document" />
 
 
 	<link rel="stylesheet" type="text/css" href="assets/fullpage/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="assets/fullpage/examples.css" />
 
+	<link href="https://fonts.googleapis.com/css?family=Prompt:200,400,600" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 
 	<style>
-
 		/* Sections
 		 * --------------------------------------- */
-		#section0 img,
-		#section1 img{
-			margin: 20px 0 0 0;
-		}
-		#section2 img{
-			margin: 20px 0 0 52px;
-		}
-		#section3 img{
-			bottom: 0px;
-			position: absolute;
-			margin-left: -420px;
-		}
-		.intro p{
-			width: 50%;
-			margin: 0 auto;
-			font-size: 1.5em;
-		}
-		.twitter-share-button{
-			position: absolute;
-			z-index: 99;
-			right: 149px;
-			top: 9px;
-		}
-
 	</style>
 	<!--[if IE]>
 		<script type="text/javascript">
@@ -49,6 +28,7 @@
 		</script>
 	<![endif]-->
 
+	<script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
@@ -56,71 +36,88 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff'],
-				anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+				anchors: ['home', 'team', 'contact'],
 				menu: '#menu',
 				scrollingSpeed: 1000
 			});
 
 		});
 	</script>
-
 </head>
+
 <body>
 
-<ul id="menu">
-	<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
-	<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-	<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
-	<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
-</ul>
+	<!--ul id="menu">
+		<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
+		<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
+		<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
+		<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
+	</ul-->
 
+<section class="navigation">
+	<ul id="menu" class="nav justify-content-center">
+	  <li data-menuanchor="team" class="nav-item">
+	    <a class="nav-link" href="#team">team</a>
+	  </li>
+		<li data-menuanchor="home" class="nav-item">
+			<a class="nav-link active" href="#home"><img src="assets/img/logo.svg"></a>
+		</li>
+	  <li data-menuanchor="contact" class="nav-item">
+	    <a class="nav-link" href="#contact">contact</a>
+	  </li>
+	</ul>
+</section>
 
-<div id="fullpage">
-	<div class="section " id="section0">
-		<div class="slide">
+	<div id="fullpage">
+		<div class="section " id="section0">
+			<div class="slide">
+				<div class="row">
+					<div class="layer content">
+						<h1 class="icon big">
+							<i class="fas fa-play"></i>
+						</h1>
+					</div>
+				</div>
+			</div>
+		<div class="slide sofa">
 			<div class="intro">
-								<img src="assets/img/1.jpg" alt="slider" />
-				<h1>Create Sliders</h1>
-				<p>Not only vertical scrolling but also horizontal scrolling. With fullPage.js you will be able to add horizontal sliders in the most simple way ever.</p>
-
+				<div class="row content">
+					<h1 class="headline">Retouren<br><span class="big_headline">-90%</span></h1>
+				</div>
 			</div>
 		</div>
 		<div class="slide">
 			<div class="intro">
-				<img src="assets/img/2.jpg" alt="simple" />
-				<h1>Simple</h1>
-				<p>Easy to use. Configurable and customizable.</p>
-			</div>
-		</div>
-		<div class="slide">
-			<div class="intro">
-				<img src="assets/img/3.jpg" alt="Cool" />
-				<h1>Cool</h1>
-				<p>It just looks cool. Impress everybody with a simple and modern web design!</p>
+				<h3>Wofür stehen wir</h3>
+				<div class="row content">
+					<div class="element col-sm-4">
+						<img src="assets/img/icons/VR.svg" alt="Icon einer VR-Brille">
+						<p>Mithilfe der neusten AR-Techniken zeigen wir Ihnen ihr Produkt in bestern Qualität</p>
+					</div>
+					<div class="element col-sm-4">
+						<img src="assets/img/icons/star.svg" alt="Icon eines Sterns">
+						<p>1UP! Mit uns weiterbringen.</p>
+					</div>
+					<div class="element col-sm-4">
+						<img src="assets/img/icons/glas.svg" alt="Icon einer Lupe">
+						<p>Mithilfe der neusten AR-Techniken zeigen wir Ihnen ihr Produkt in bestern Qualität</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="section active" id="section1">
+	<div class="section" id="section1">
+		<div class="intro">
+			<h3>Team</h3>
+		</div>
 	</div>
 	<div class="section" id="section2">
 		<div class="intro">
-			<h1>Example</h1>
-			<p>HTML markup example to define 4 sections.</p>
-			<img src="assets/img/3.jps" alt="example" />
+			<h3>Kontakt</h3>
 		</div>
-	</div>
-	<div class="section" id="section3">
-		<div class="intro">
-			<h1>Working On Tablets</h1>
-			<p>
-				Designed to fit to different screen sizes as well as tablet and mobile devices.
-				<br /><br /><br /><br /><br /><br />
-			</p>
-		</div>
-		<img src="imgs/tablets.png" alt="tablets" />
 	</div>
 </div>
 
 </body>
+
 </html>

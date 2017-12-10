@@ -1,0 +1,105 @@
+/* Farben
+
+Verlauf
+#015799 - Dubnkles Blau
+#0B96D5 - Helles Blau
+
+
+
+*/
+
+
+/* Typografie */
+
+body{
+  font-family: 'Prompt', sans-serif;
+  color: #ffffff;
+}
+
+
+h1, h2, h3, h4, h5{
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+p{
+  font-size: 20px;
+}
+
+/* Abschnitt - Headlines */
+
+h1.headline{
+  margin: 0px auto;
+  font-size: 150px;
+  line-height: 200px;
+}
+
+.big_headline{
+  font-size: 300px
+}
+
+/* Kleiner */
+
+h3{
+  font-size: 100px;
+}
+
+
+
+/* Icon */
+
+h1.icon.big{
+  font-size: 200px;
+}
+
+/* Abschnitte */
+
+.section{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#015799+0,0b96d5+100 */
+  background: #015799; /* Old browsers */
+  background: -moz-linear-gradient(left, #015799 0%, #0b96d5 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #015799 0%,#0b96d5 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #015799 0%,#0b96d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#015799', endColorstr='#0b96d5',GradientType=1 ); /* IE6-9 */
+}
+
+
+#section0 .slide.sofa{
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-image: url(../img/dotswhite_sofa.png),
+  linear-gradient(to right, #015799 0%,#0b96d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
+}
+
+.content{
+  padding: 100px;
+  margin: 0px auto;
+}
+
+.element{
+  text-align: center;;
+}
+
+.element img{
+  display: block;
+  margin: 0px auto 125px auto;
+
+}
+
+
+/* Navigation */
+
+.navigation{
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+}
+
+.navigation a{
+    font-weight: 200;
+    color: #fff;
+}
