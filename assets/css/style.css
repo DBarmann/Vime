@@ -162,33 +162,29 @@ body{
 
 /*Nav-Pfeile */
 
-.fp-controlArrow{
-  top: 90%;
+
+.fp-controlArrow {
+    border: none;
+    position: absolute;
+    top: 640px;
+    width: 32px!important; /* This can be added here so you don't have to set a width and height 2 times for each arrow, this will create one width for both arrows */
+    height: 32px!important; /* This does the same as above */
+    z-index: 4;
+    cursor: pointer;
 }
 
-.fp-controlArrow::before{
-  border-style: solid;
-  border-width: 0.25em 0.25em 0 0;
-  content: '';
-  display: inline-block;
-  height: 0.45em;
-  left: 0.15em;
-  position: relative;
-  top: 0.15em;
-  transform: rotate(-45deg);
-  vertical-align: top;
-  width: 0.45em;
+.fp-controlArrow.fp-prev {
+    left:20px;
+    background: url(../img/icons/links.png) no-repeat;
+    background-size: contain;
 }
 
-
-.fp-next:before {
-	left: 0;
-	transform: rotate(45deg);
+.fp-controlArrow.fp-next {
+    right:20px;
+    background: url(../img/icons/rechts.png) no-repeat;
+    background-size: contain;
 }
 
-.fp-slidesNav{
-
-}
 
 /* Section Team */
 
@@ -207,7 +203,7 @@ body{
   color: #333;
 }
 
-.section-team h2{
+.section-team h2 , .section-kontakt h2{
   font-size: 50px;
   display: inline-block;
 }
@@ -225,4 +221,42 @@ body{
 .team .team-item:nth-of-type(odd) {
   top: 50px;
   position: relative;
+}
+
+/* Team Member */
+
+.slide-team-member .fp-tableCell{
+  vertical-align: bottom;
+}
+
+.lastname{
+  font-size: 4.00rem;
+}
+
+.subline{
+    font-size: 2.00rem;
+}
+
+
+.member-img{
+  display: block;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.member-text{
+  z-index: 5;
+  position: absolute;
+  bottom: 0px;
+  margin-bottom: 120px;
+}
+
+.lastname, .subline{
+    text-align: left;
+    margin: 0px;
+    line-height: 1.0;
+}
+
+.position{
+
 }

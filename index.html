@@ -23,7 +23,7 @@
 		</script>
 	<![endif]-->
 
-<script defer src="assets/fontawesome/js/fontawesome-all.js"></script>
+	<link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
 	<script src="assets/jquery/jquery-3.2.1.min.js"></script>
 
 	<script type="text/javascript" src="assets/fullpage/jquery.fullPage.js"></script>
@@ -32,8 +32,10 @@
 			$('#fullpage').fullpage({
 				anchors: ['home', 'team', 'contact'],
 				menu: '#menu',
+				controlArrows: true,
+				verticalCentered: true,
 				scrollingSpeed: 1000,
-				slidesNavigation: true,
+				slidesNavigation: false,
 				slidesNavPosition: 'bottom',
 				navigationTooltips: ['firstSlide', 'secondSlide']
 			});
@@ -123,14 +125,50 @@
 			</div>
 		</div>
 		<div class="slide">
-			<div class="content">
+			<div class="slide-team-member">
 
+				<div class="content">
+					<div class="member-text">
+						<h3 class="subline">Andreas</h3>
+						<h2 class="lastname">Diebold</h2>
+						<h3 class="subline">Head of Vime</h3>
+					</div>
+				</div>
+				<img class="img-fluid member-img" src="assets/img/team/freigestellt_andreas_diebold.png">
 			</div>
 		</div>
 	</div>
-	<div class="section" id="section2">
-		<div class="intro">
-			<h3>Kontakt</h3>
+	<div class="section section-kontakt" id="section2">
+		<div class="content">
+			<h2>Kontakt</h2>
+			<p>vime | Mohn Media<br>
+				Carl-Bertelsmann-Str. 131<br>
+				33330 Gütersloh
+			</p>
+			<p>+49(0)5241-80-0<br>
+				+49(0)5241-80-62321<br>
+				info@vime.de</p>
+
+			<div class="bottom_nav">
+				<div class="part">
+					<a href="#">Unternehmen</a><br>
+					<a href="#">Mohn Media</a><br>
+					<a href="#">Bertelsmann</a><br>
+					<a href="#">Karriere</a><br>
+				</div>
+				<div class="part">
+					<a href="#">Unternehmen</a><br>
+					<a href="#">Mohn Media</a><br>
+					<a href="#">Bertelsmann</a><br>
+					<a href="#">Karriere</a><br>
+				</div>
+				<div class="part">
+					<a href="#">Unternehmen</a><br>
+					<a href="#">Mohn Media</a><br>
+					<a href="#">Bertelsmann</a><br>
+					<a href="#">Karriere</a><br>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
