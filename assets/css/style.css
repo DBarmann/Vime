@@ -4,9 +4,10 @@ Verlauf
 #015799 - Dubnkles Blau
 #0B96D5 - Helles Blau
 
-
-
 */
+*{
+  box-sizing: border-box;
+}
 
 /* prompt-200 - latin */
 @font-face {
@@ -66,25 +67,28 @@ h1, h2, h3, h4, h5{
 }
 
 p{
+  margin: 20px 0px 20px 0px;
+  font-weight: 200;
   font-size: 20px;
+  text-align: center;
 }
 
 /* Abschnitt - Headlines */
 
 h1.headline{
   margin: 0px auto;
-  font-size: 150px;
-  line-height: 200px;
+  /* font-size: 150px; */
+  /* line-height: 200px; */
 }
 
 .big_headline{
-  font-size: 300px
+  /* font-size: 300px */
 }
 
 /* Kleiner */
 
 h3{
-  font-size: 100px;
+  /* font-size: 100px; */
 }
 
 
@@ -92,7 +96,7 @@ h3{
 /* Icon */
 
 h1.icon.big{
-  font-size: 200px;
+  /* font-size: 200px; */
 }
 
 /* Abschnitte */
@@ -120,7 +124,7 @@ body{
 }
 
 .content{
-  padding: 100px;
+  padding: 50px;
   margin: 0px auto;
 }
 
@@ -130,8 +134,6 @@ body{
 
 .element img{
   display: block;
-  margin: 0px auto 125px auto;
-
 }
 
 
@@ -140,10 +142,87 @@ body{
 .navigation{
   position: fixed;
   width: 100%;
+  padding: 0px 20px;
   z-index: 200;
+}
+
+.navigation li{
+
 }
 
 .navigation a{
     font-weight: 200;
     color: #fff;
+}
+
+.nav-item{
+  max-height: 50px;
+}
+
+
+/*Nav-Pfeile */
+
+.fp-controlArrow{
+  top: 90%;
+}
+
+.fp-controlArrow::before{
+  border-style: solid;
+  border-width: 0.25em 0.25em 0 0;
+  content: '';
+  display: inline-block;
+  height: 0.45em;
+  left: 0.15em;
+  position: relative;
+  top: 0.15em;
+  transform: rotate(-45deg);
+  vertical-align: top;
+  width: 0.45em;
+}
+
+
+.fp-next:before {
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.fp-slidesNav{
+
+}
+
+/* Section Team */
+
+.section-team .content{
+  padding: 20px;
+}
+
+.section-team .content button{
+  float: right;
+  color: #fff;
+  font-size: 30px;
+  margin-right: 18%;
+}
+
+.section-team .content button:active{
+  color: #333;
+}
+
+.section-team h2{
+  font-size: 50px;
+  display: inline-block;
+}
+
+.team{
+  margin-top: -50px;
+  width: 100%;
+}
+
+.team .team-item {
+  width: 50%;
+  float: left;
+}
+
+.team .team-item:nth-of-type(odd) {
+  top: 50px;
+  position: relative;
 }

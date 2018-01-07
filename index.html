@@ -2,11 +2,11 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width">
 	<title>Vime - Home</title>
 
 
 	<link rel="stylesheet" type="text/css" href="assets/fullpage/jquery.fullPage.css" />
-	<link rel="stylesheet" type="text/css" href="assets/fullpage/examples.css" />
 
 	<!--link href="https://fonts.googleapis.com/css?family=Prompt:200,400,600" rel="stylesheet"-->
 
@@ -32,37 +32,33 @@
 			$('#fullpage').fullpage({
 				anchors: ['home', 'team', 'contact'],
 				menu: '#menu',
-				scrollingSpeed: 1000
+				scrollingSpeed: 1000,
+				slidesNavigation: true,
+				slidesNavPosition: 'bottom',
+				navigationTooltips: ['firstSlide', 'secondSlide']
 			});
-
 		});
 	</script>
 </head>
 
 <body>
 
-	<!--ul id="menu">
-		<li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
-		<li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
-		<li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
-		<li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
-	</ul-->
-
 <section class="navigation">
 	<ul id="menu" class="nav justify-content-center">
-	  <li data-menuanchor="team" class="nav-item">
-	    <a class="nav-link" href="#team">team</a>
+	  <li data-menuanchor="team" class="nav-item col-4">
+	    <a class="nav-link" href="#contact">kontakt</a>
 	  </li>
-		<li data-menuanchor="home" class="nav-item">
-			<a class="nav-link active" href="#home"><img src="assets/img/logo.svg"></a>
+		<li data-menuanchor="home" class="nav-item col-4">
+			<a class="nav-link active" href="#home"><img class="img-fluid"  style="height: 30px" src="assets/img/logo.svg"></a>
 		</li>
-	  <li data-menuanchor="contact" class="nav-item">
-	    <a class="nav-link" href="#contact">contact</a>
+	  <li data-menuanchor="contact" class="nav-item col-4">
+	    <a class="nav-link" href="#team">team</a>
 	  </li>
 	</ul>
 </section>
 
 	<div id="fullpage">
+
 		<div class="section " id="section0">
 			<div class="slide">
 				<div class="row">
@@ -77,32 +73,59 @@
 			<div class="intro">
 				<div class="row content">
 					<h1 class="headline">Retouren<br><span class="big_headline">-90%</span></h1>
+					<p>Mithilfe der neusten AR-Techniken zeigen wir Ihnen ihr Produkt in bestern Qualität</p>
 				</div>
 			</div>
 		</div>
 		<div class="slide">
 			<div class="intro">
-				<h3>Wofür stehen wir</h3>
 				<div class="row content">
-					<div class="element col-sm-4">
-						<img src="assets/img/icons/VR.svg" alt="Icon einer VR-Brille">
-						<p>Mithilfe der neusten AR-Techniken zeigen wir Ihnen ihr Produkt in bestern Qualität</p>
+					<h3>Wofür stehen wir</h3>
+					<div class="element col-4">
+						<img class="img-fluid" src="assets/img/icons/VR.svg" alt="Icon einer VR-Brille">
 					</div>
-					<div class="element col-sm-4">
-						<img src="assets/img/icons/star.svg" alt="Icon eines Sterns">
-						<p>1UP! Mit uns weiterbringen.</p>
+					<div class="element col-4">
+						<img class="img-fluid" src="assets/img/icons/star.svg" alt="Icon eines Sterns">
 					</div>
-					<div class="element col-sm-4">
-						<img src="assets/img/icons/glas.svg" alt="Icon einer Lupe">
-						<p>Mithilfe der neusten AR-Techniken zeigen wir Ihnen ihr Produkt in bestern Qualität</p>
+					<div class="element col-4">
+						<img class="img-fluid" src="assets/img/icons/glas.svg" alt="Icon einer Lupe">
 					</div>
+					<p>Mithilfe der neusten AR-Techniken zeigen wir Ihnen ihr Produkt in bestern Qualität</p>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="section" id="section1">
-		<div class="intro">
-			<h3>Team</h3>
+	<div class="section section-team" id="section1">
+		<div class="slide">
+			<div class="content">
+				<h2>Team</h2>
+				<div class="intro team">
+					<div class="team-item">
+						<img class="img-fluid" src="http://via.placeholder.com/300x300?text=Person1">
+					</div>
+					<div class="team-item">
+						<img class="img-fluid" src="http://via.placeholder.com/300x300?text=Person2">
+					</div>
+					<div class="team-item">
+						<img class="img-fluid" src="http://via.placeholder.com/300x300?text=Person3">
+					</div>
+					<div class="team-item">
+						<img class="img-fluid" src="http://via.placeholder.com/300x300?text=Person4">
+					</div>
+					<div class="team-item">
+						<img class="img-fluid" src="http://via.placeholder.com/300x300?text=Person5">
+					</div>
+					<div class="team-item">
+						<img class="img-fluid" src="http://via.placeholder.com/300x300?text=Person6">
+					</div>
+				</div>
+				<button type="button" class="shuffle"><i class="fas fa-random"></i></button>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="content">
+
+			</div>
 		</div>
 	</div>
 	<div class="section" id="section2">
@@ -113,5 +136,19 @@
 </div>
 
 </body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".shuffle").click(function(){
+			$(".team").html($(".team .team-item").sort(function(){
+			    return Math.random()-0.5;
+
+				}));
+			});
+			$(".team").html($(".team .team-item").sort(function(){
+			    return Math.random()-0.5;
+			}));
+	});
+</script>
+
 
 </html>

@@ -1,18 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="159px" height="97px" viewBox="0 0 159 97" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48 (47235) - http://www.bohemiancoding.com/sketch -->
-    <title>Page 1</title>
-    <desc>Created with Sketch.</desc>
-    <defs>
-        <polygon id="path-1" points="1.66205645e-15 1.15151277e-14 159 1.15151277e-14 159 97 0 97"></polygon>
-    </defs>
-    <g id="Desktop_home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-231.000000, -517.000000)">
-        <g id="Page-1" transform="translate(231.000000, 517.000000)">
-            <mask id="mask-2" fill="white">
-                <use xlink:href="#path-1"></use>
-            </mask>
-            <g id="Clip-2"></g>
-            <path d="M113.874069,49.4690925 C105.126791,49.4690925 98.0326443,42.4067094 98.0326443,33.6913593 C98.0326443,24.9792502 105.126791,17.913626 113.874069,17.913626 C122.621347,17.913626 129.715493,24.9792502 129.715493,33.6913593 C129.715493,42.4067094 122.621347,49.4690925 113.874069,49.4690925 M48.6599877,49.4690925 C39.9094556,49.4690925 32.8185632,42.4067094 32.8185632,33.6913593 C32.8185632,24.9792502 39.9094556,17.913626 48.6599877,17.913626 C57.4072657,17.913626 64.5014122,24.9792502 64.5014122,33.6913593 C64.5014122,42.4067094 57.4072657,49.4690925 48.6599877,49.4690925 M119.949652,0 L39.0503479,0 C17.5726566,0 0,17.5020048 0,38.893344 L0,58.106656 C0,79.4979952 17.5726566,97 39.0503479,97 L62.3080843,97 C65.1620139,97 67.4041547,94.6631582 67.4009005,91.820703 L67.4009005,91.7688452 C67.4009005,75.093324 72.9623209,61.5746458 79.8189112,61.5746458 C86.6755014,61.5746458 92.2336676,75.093324 92.2336676,91.7688452 L92.2336676,91.820703 C92.2304134,94.6631582 94.4725542,97 97.329738,97 L119.949652,97 C141.427343,97 159,79.4979952 159,58.106656 L159,38.893344 C159,17.5020048 141.427343,0 119.949652,0" id="Fill-1" fill="#FFFFFF" mask="url(#mask-2)"></path>
-        </g>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 180 180" style="enable-background:new 0 0 180 180;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Adobe_OpacityMaskFilter);}
+	.st1{fill:#FFFFFF;}
+	.st2{mask:url(#mask-2);fill:#FFFFFF;}
+</style>
+<title>Page 1</title>
+<desc>Created with Sketch.</desc>
+<g id="Desktop_home" transform="translate(-231.000000, -517.000000)">
+	<g id="Page-1" transform="translate(231.000000, 517.000000)">
+		<g id="Clip-2">
+		</g>
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="10.5" y="41.5" width="159" height="97">
+				<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="10.5" y="41.5" width="159" height="97" id="mask-2">
+			<g class="st0">
+				<polygon id="path-1" class="st1" points="10.5,41.5 169.5,41.5 169.5,138.5 10.5,138.5 				"/>
+			</g>
+		</mask>
+		<path id="Fill-1" class="st2" d="M124.4,91c-8.7,0-15.8-7.1-15.8-15.8c0-8.7,7.1-15.8,15.8-15.8s15.8,7.1,15.8,15.8
+			C140.2,83.9,133.1,91,124.4,91 M59.2,91c-8.8,0-15.8-7.1-15.8-15.8c0-8.7,7.1-15.8,15.8-15.8c8.7,0,15.8,7.1,15.8,15.8
+			C75,83.9,67.9,91,59.2,91 M130.4,41.5H49.6c-21.5,0-39.1,17.5-39.1,38.9v19.2c0,21.4,17.6,38.9,39.1,38.9h23.3
+			c2.9,0,5.1-2.3,5.1-5.2v-0.1c0-16.7,5.6-30.2,12.4-30.2s12.4,13.5,12.4,30.2v0.1c0,2.8,2.2,5.2,5.1,5.2h22.6
+			c21.5,0,39.1-17.5,39.1-38.9V80.4C169.5,59,151.9,41.5,130.4,41.5"/>
+	</g>
+</g>
 </svg>
