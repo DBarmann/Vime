@@ -69,14 +69,14 @@ h1, h2, h3, h4, h5{
 p{
   margin: 20px 0px 20px 0px;
   font-weight: 200;
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
 }
 
 /* Abschnitt - Headlines */
 
 h1.headline{
-  margin: 0px auto;
+  margin: 60px auto;
   /* font-size: 150px; */
   /* line-height: 200px; */
 }
@@ -166,7 +166,7 @@ body{
 .fp-controlArrow {
     border: none;
     position: absolute;
-    top: 640px;
+    top: 95%;
     width: 32px!important; /* This can be added here so you don't have to set a width and height 2 times for each arrow, this will create one width for both arrows */
     height: 32px!important; /* This does the same as above */
     z-index: 4;
@@ -186,10 +186,19 @@ body{
 }
 
 
+
+/*Section About */
+
+.intro .element img{
+  max-width: 30px;
+  margin: 0px auto;
+}
+
 /* Section Team */
 
 .section-team .content{
-  padding: 20px;
+  padding: 50px 30px;
+height: 100%;
 }
 
 .section-team .content button{
@@ -209,7 +218,7 @@ body{
 }
 
 .team{
-  margin-top: -50px;
+  margin-top: -70px;
   width: 100%;
 }
 
@@ -219,7 +228,7 @@ body{
 }
 
 .team .team-item:nth-of-type(odd) {
-  top: 50px;
+  top: 80px;
   position: relative;
 }
 
@@ -259,4 +268,37 @@ body{
 
 .position{
 
+}
+
+
+/* Kontakt */
+
+.section-kontakt .content{
+  padding: 50px 30px;
+  height: 100%;
+}
+
+.section-kontakt p{
+  font-size: 14px;
+  text-align: left;
+}
+
+.section-kontakt .bottom_nav{
+  position: absolute;
+  bottom: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  font-size: 12px;
+}
+
+.section-kontakt .bottom_nav .part{
+  margin-bottom: 20px;
+}
+
+.section-kontakt .bottom_nav a{
+  font-weight: 200;
+  color: #fff;
 }
