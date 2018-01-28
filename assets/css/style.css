@@ -60,7 +60,6 @@ body{
 
 
 h1, h2, h3, h4, h5{
-  text-transform: uppercase;
   font-weight: bold;
   text-align: center;
   letter-spacing: 2px;
@@ -70,27 +69,40 @@ p{
   margin: 20px 0px 20px 0px;
   font-weight: 200;
   font-size: 14px;
-  text-align: center;
+}
+
+p.big_text{
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 1.3;
+}
+
+p.hightlight{
+
 }
 
 /* Abschnitt - Headlines */
 
-h1.headline{
-  margin: 60px auto;
-  /* font-size: 150px; */
-  /* line-height: 200px; */
+h1{
+  font-size: 60px;
+  margin: 0px auto;
+  line-height: 1.1;
 }
 
-.big_headline{
-  /* font-size: 300px */
+h1.big_headline{
+   font-size: 100px
 }
-
-/* Kleiner */
 
 h3{
-  /* font-size: 100px; */
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 0px;
+  margin: 0px auto;
 }
 
+.uppercase{
+  text-transform: uppercase;
+}
 
 
 /* Icon */
@@ -103,102 +115,86 @@ h1.icon.big{
 
 body{
   background: #015799; /* Old browsers */
-  background: -moz-linear-gradient(left, #015799 0%, #0b96d5 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #015799 0%,#0b96d5 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #015799 0%,#0b96d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#015799', endColorstr='#0b96d5',GradientType=1 ); /* IE6-9 */
+   background: -moz-linear-gradient(left, #015799 0%, #0b96d5 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(left, #015799 0%,#0b96d5 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(to right, #015799 0%,#0b96d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#015799', endColorstr='#0b96d5',GradientType=1 ); /* IE6-9 */ */ */ */
+}
+
+.intro{
+  max-width: 800px;
+  margin: 0px auto;
 }
 
 .section{
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#015799+0,0b96d5+100 */
   background-color: none;
 }
 
-
-#section0 .slide.sofa{
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-blend-mode: multiply;
-  background-image: url(../img/dotswhite_sofa.png); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */;
-}
-
 .content{
-  padding: 50px;
+  max-width: 500px;
+  padding: 40px;
   margin: 0px auto;
 }
 
-.element{
-  text-align: center;;
-}
 
-.element img{
-  display: block;
-}
+/* Images */
 
-
-/* Navigation */
-
-.navigation{
-  position: fixed;
-  width: 100%;
-  padding: 0px 20px;
-  z-index: 200;
-}
-
-.navigation li{
+.img-fluid{
 
 }
 
-.navigation a{
-    font-weight: 200;
-    color: #fff;
+
+/* Slides Style Liste */
+
+.slide-style-list p{
+  margin: -15px 0px;
+  font-size: 20px;
 }
 
-.nav-item{
-  max-height: 50px;
+.slide-style-list p.hightlight{
+  font-size: 30px;
+  margin-bottom: 0px;
+  font-weight: 900;
 }
 
-
-/*Nav-Pfeile */
-
-
-.fp-controlArrow {
-    border: none;
-    position: absolute;
-    top: 95%;
-    width: 32px!important; /* This can be added here so you don't have to set a width and height 2 times for each arrow, this will create one width for both arrows */
-    height: 32px!important; /* This does the same as above */
-    z-index: 4;
-    cursor: pointer;
+.slide-style-list .text{
+  padding: 5px 0px;
 }
 
-.fp-controlArrow.fp-prev {
-    left:20px;
-    background: url(../img/icons/links.png) no-repeat;
-    background-size: contain;
+.slide-style-list .col-12{
+  margin-bottom: -10px;
 }
 
-.fp-controlArrow.fp-next {
-    right:20px;
-    background: url(../img/icons/rechts.png) no-repeat;
-    background-size: contain;
+.slide-style-list .element{
+  margin-bottom: 20px;
 }
 
+/* Slide Style Alternative */
 
-
-/*Section About */
-
-.intro .element img{
-  max-width: 30px;
-  margin: 0px auto;
+.slide-style-alt .content{
+  padding-bottom: 0px;
 }
+
+.slide-style-alt .content:last-of-type{
+  padding-top: 0px;
+}
+
+.slide-style-alt .text-left:first-of-type{
+  margin-bottom: -10px;
+}
+
+.slide-style-alt{
+
+}
+
+/**************** ABSCHNITT Team ************/
+
 
 /* Section Team */
 
 .section-team .content{
   padding: 50px 30px;
-height: 100%;
+  height: 100%;
 }
 
 .section-team .content button{
@@ -232,24 +228,9 @@ height: 100%;
   position: relative;
 }
 
-/* Team Member */
-
-.slide-team-member .fp-tableCell{
-  vertical-align: bottom;
-}
-
-.lastname{
-  font-size: 4.00rem;
-}
-
-.subline{
-    font-size: 2.00rem;
-}
-
 
 .member-img{
   display: block;
-  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -257,7 +238,7 @@ height: 100%;
   z-index: 5;
   position: absolute;
   bottom: 0px;
-  margin-bottom: 120px;
+  margin-bottom: 5%;
 }
 
 .lastname, .subline{
@@ -266,8 +247,148 @@ height: 100%;
     line-height: 1.0;
 }
 
-.position{
+/* Slide Übersicht */
+.slide-team-overview .overlay_text{
+  text-transform: uppercase;
+  z-index: 10;
+  position: absolute;
+  display: inline-block;
+  transform: translate(50%, 130%);
+}
 
+.slide-team-overview h3{
+  font-size: 20px;
+  font-weight: 500;
+  transform: translateX(-40%);
+}
+
+.slide-team-overview h3:last-of-type{
+  transform: translateX(-10%);
+}
+
+
+/* Slide Detail */
+
+
+.slide-team-member .fp-tableCell{
+  vertical-align: bottom;
+}
+
+.slide-team-member .member-text{
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.slide-team-member .lastname{
+  font-weight: 600;
+  font-size: 50px;
+}
+
+.slide-team-member .subline{
+  font-weight: 600;
+    font-size: 32px;
+}
+
+/* Image Background */
+
+img{
+    mix-blend-mode: multiply;
+}
+
+.img-background{
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+/* Sections */
+
+.slide.welcome .img-background{
+  background-image:
+  url(../img/bg/sofa_large.jpg),
+  url(../img/bg/dot_pattern.png),
+  linear-gradient(to right, #015799 0%,#0b96d5 100%);
+}
+
+.slide.online .img-background{
+  background-image:
+  url(../img/bg/chair_large.jpg),
+  url(../img/bg/dot_pattern.png),
+  linear-gradient(to right, #015799 0%,#0b96d5 100%);
+}
+
+.slide.carefree .img-background{
+  background-image:
+  url(../img/bg/chair_large.jpg),
+  url(../img/bg/dot_pattern.png),
+  linear-gradient(to right, #015799 0%,#0b96d5 100%);
+}
+
+.slide.advantages .img-background{
+  background-image:
+  url(../img/bg/chair_large.jpg),
+  url(../img/bg/dot_pattern.png),
+  linear-gradient(to right, #015799 0%,#0b96d5 100%);
+}
+
+
+
+.element{
+  text-align: center;;
+}
+
+.element img{
+  display: block;
+}
+
+/* Navigation */
+
+.navigation{
+  position: fixed;
+  width: 100%;
+  padding: 20px 20px;
+  z-index: 200;
+}
+
+.navigation li{
+
+}
+
+.navigation a{
+    font-weight: 200;
+    color: #fff;
+}
+
+.nav-item{
+  text-align: center;
+  max-height: 50px;
+}
+
+
+/*Nav-Pfeile */
+
+
+.fp-controlArrow {
+    border: none;
+    position: absolute;
+    top: 100%;
+    width: 15px!important; /* This can be added here so you don't have to set a width and height 2 times for each arrow, this will create one width for both arrows */
+    height: 15px!important; /* This does the same as above */
+    z-index: 4;
+    cursor: pointer;
+}
+
+.fp-controlArrow.fp-prev {
+    left:20px;
+    background: url(../img/icons/links.png) no-repeat;
+    background-size: contain;
+}
+
+.fp-controlArrow.fp-next {
+    right:20px;
+    background: url(../img/icons/rechts.png) no-repeat;
+    background-size: contain;
 }
 
 
@@ -301,4 +422,82 @@ height: 100%;
 .section-kontakt .bottom_nav a{
   font-weight: 200;
   color: #fff;
+}
+
+
+/************* Responsive *********/
+/*
+/*
+/*
+*/
+
+/***** iPhone X - Anpassung */
+@media (min-height: 800px){
+
+
+/*************** Ihre Vorteile ********************/
+
+.slide-style-list .element{
+  margin-bottom: 40px;
+}
+
+
+/**** Team ****/
+
+.team .team-item:nth-of-type(odd){
+
+}
+
+
+
+
+}
+
+
+
+@media (min-width: 992px){
+
+/**************** Generell ************/
+
+/* Nav-Pfeile */
+.fp-controlArrow {
+    top: 50%;
+}
+
+
+
+
+
+/**************** ABSCHNITT Team ************/
+
+
+  /* Section Team */
+  .section-team  .content{
+    max-width: 980px;
+  }
+
+  .section-team  .team{
+    margin-top: 50px;
+  }
+
+  .section-team .content .shuffle{
+    background-color: transparent;
+    border: none;
+    margin-right: 15%;
+  }
+
+  /* Section Detail */
+
+  .slide-team-member .lastname{
+    font-size: 120px;
+  }
+
+  .slide-team-member .subline{
+      font-size: 70px;
+  }
+
+  .slide-team-member .member-text{
+    margin-bottom: 1%;
+  }
+
 }

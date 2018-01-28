@@ -36,6 +36,8 @@
 				verticalCentered: true,
 				scrollingSpeed: 1000,
 				slidesNavigation: false,
+				paddingTop: '50px',
+				dragAndMove: true,
 				slidesNavPosition: 'bottom',
 				navigationTooltips: ['firstSlide', 'secondSlide']
 			});
@@ -45,22 +47,22 @@
 
 <body>
 
-<section class="navigation">
-	<ul id="menu" class="nav justify-content-center">
-	  <li data-menuanchor="team" class="nav-item col-4">
-	    <a class="nav-link" href="#contact">kontakt</a>
-	  </li>
-		<li data-menuanchor="home" class="nav-item col-4">
-			<a class="nav-link active" href="#home"><img class="img-fluid"  style="height: 30px" src="assets/img/logo.svg"></a>
-		</li>
-	  <li data-menuanchor="contact" class="nav-item col-4">
-	    <a class="nav-link" href="#team">team</a>
-	  </li>
-	</ul>
-</section>
+	<section class="navigation">
+		<ul id="menu" class="nav justify-content-center">
+			<li data-menuanchor="team" class="nav-item col-4">
+				<a class="nav-link" href="#contact">kontakt</a>
+			</li>
+			<li data-menuanchor="home" class="nav-item col-4">
+				<a class="nav-link active" href="#home"><img class="img-fluid"  style="height: 30px" src="assets/img/logo.svg"></a>
+			</li>
+			<li data-menuanchor="contact" class="nav-item col-4">
+				<a class="nav-link" href="#team">team</a>
+			</li>
+		</ul>
+	</section>
 
 	<div id="fullpage">
-		<div class="section " id="section0">
+		<div class="section" id="section0">
 			<div class="slide">
 				<div class="row">
 					<div class="layer content">
@@ -70,143 +72,322 @@
 					</div>
 				</div>
 			</div>
-		<div class="slide sofa">
+			<div class="slide welcome">
+				<div class="intro">
+					<div class="img-background">
+						<div class="col-12 content">
+							<h3>Willkommen bei</h3>
+							<h1 class="big_headline uppercase">Vime</h1>
+							<h3 class="uppercase">Virtual Media<br></h1>
+					</div>
+				</div>
+				<div class="col-12 content">
+					<p class="big_text">Sie kennen das? Sie haben dieses wunderbar geschreinerte Möbelstück in ihrem Geschäft, aber online kommt die Qualität „nicht so ganz rüber”?</p>
+				</div>
+			</div>
+		</div>
+		<div class="slide online">
 			<div class="intro">
-				<div class="row content">
-					<h1 class="headline">Retouren<br><span class="big_headline">-90%</span></h1>
-					<p>Durch die realistische Visualiserung der Produkte jönnen bis zu 90% der Retouren eingespart werden</p>
-				</div>
-			</div>
-		</div>
-		<div class="slide">
-			<div class="intro">
-				<div class="row content">
-					<h3>Wofür stehen wir</h3>
-					<div class="element col-4">
-						<img class="img-fluid" src="assets/img/icons/VR.svg" alt="Icon einer VR-Brille">
+				<div class="img-background">
+					<div class="col-12 content">
+							<h3>Revolutionieren Sie Ihre</h3>
+							<h1>Online Präsenz</h1>
+						</div>
 					</div>
-					<div class="element col-4">
-						<img class="img-fluid" src="assets/img/icons/star.svg" alt="Icon eines Sterns">
-					</div>
-					<div class="element col-4">
-						<img class="img-fluid" src="assets/img/icons/glas.svg" alt="Icon einer Lupe">
-					</div>
-					<p>Mithilfe der neusten AR-Techniken zeigen wir Ihnen ihr Produkt in bestern Qualität</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="section section-team" id="section1">
-		<div class="slide">
-			<div class="content">
-				<h2>Team</h2>
-				<div class="intro team">
-					<div class="team-item">
-						<img class="img-fluid" src="assets/img/team/1.png">
-					</div>
-					<div class="team-item">
-						<img class="img-fluid" src="assets/img/team/2.png">
-					</div>
-					<div class="team-item">
-						<img class="img-fluid" src="assets/img/team/1.png">
-					</div>
-					<div class="team-item">
-						<img class="img-fluid" src="assets/img/team/2.png">
-					</div>
-					<div class="team-item">
-						<img class="img-fluid" src="assets/img/team/1.png">
-					</div>
-					<div class="team-item">
-						<img class="img-fluid" src="assets/img/team/2.png">
+					<div class="col-12 content">
+						<p>Der VIME-Workflow erstellt aus Ihrem Produkt eine digitale 3D Version und ermöglicht somit eine neue Art von Online Shopping. Der dabei entstehende, hochauflösende Content vermittelt Ihrem Kunden das Gefühl, in Ihren Verkaufsräumen zu stehen und
+							die Struktur, Farbgebung und Verarbeitung des Produktes genau beurteilen zu können. So kann man sich mit Tablet oder Smartphone den ausgewählten Sessel virtuell ins eigene Wohnzimmer stellen und unmittelbar dessen Merkmale verändern, Bilder anschauen
+							oder Videos davon genießen.</p>
 					</div>
 				</div>
-				<button type="button" class="shuffle"><i class="fas fa-random"></i></button>
 			</div>
-		</div>
-		<div class="slide">
-			<div class="slide-team-member">
-				<div class="content">
-					<div class="member-text">
-						<h3 class="subline">Andreas</h3>
-						<h2 class="lastname">Diebold</h2>
-						<h3 class="subline">Head of Vime</h3>
+			<div class="slide carefree">
+				<div class="intro">
+					<div class="img-background">
+						<div class="col-12 content">
+							<h3>Unser</h3>
+							<h1>Rundum-sorglos-Paket</h1>
+						</div>
+					</div>
+					<div class="col-12 content">
+						<p>Wir ermöglichen Ihnen individuelle, digitale Produktpräsentationen, die auf Ihre Bedürfnisse zugeschnitten sind. Und auch damit lassen wir Sie nicht allein. Je nach Bedarf, übernehmen wir von der Beratung bis zur technischen Implementierung und
+							IT Verknüpfung alles, was Sie benötigen um Ihre Produkte erfolgreich zu vermarkten und sich vom Wettbewerb abzuheben. Nicht nur Ihr Kunde spart dadurch Zeit, Geld und Stress, sondern auch Sie: Da wir Ihnen das Gesamtpaket an Service bieten, können
+							Sie entspannt Ihrem operativen Kerngeschäft nachgehen.</p>
 					</div>
 				</div>
-				<img class="img-fluid member-img" src="assets/img/team/freigestellt_andreas_diebold.png">
 			</div>
-		</div>
-		<div class="slide">
-			<div class="slide-team-member">
-				<div class="content">
-					<div class="member-text">
-						<h3 class="subline">Andreas</h3>
-						<h2 class="lastname">Diebold</h2>
-						<h3 class="subline">Head of Vime</h3>
-					</div>
-				</div>
-				<img class="img-fluid member-img" src="assets/img/team/freigestellt_andreas_diebold.png">
-			</div>
-		</div>
-		<div class="slide">
-			<div class="slide-team-member">
-				<div class="content">
-					<div class="member-text">
-						<h3 class="subline">Andreas</h3>
-						<h2 class="lastname">Diebold</h2>
-						<h3 class="subline">Head of Vime</h3>
-					</div>
-				</div>
-				<img class="img-fluid member-img" src="assets/img/team/freigestellt_andreas_diebold.png">
-			</div>
-		</div>
-	</div>
-	<div class="section section-kontakt" id="section2">
-		<div class="content">
-			<h2>Kontakt</h2>
-			<p>vime | Mohn Media<br>
-				Carl-Bertelsmann-Str. 131<br>
-				33330 Gütersloh
-			</p>
-			<p>+49(0)5241-80-0<br>
-				+49(0)5241-80-62321<br>
-				info@vime.de</p>
 
-			<div class="bottom_nav">
-				<div class="part">
-					<a href="#">Unternehmen</a><br>
-					<a href="#">Mohn Media</a><br>
-					<a href="#">Bertelsmann</a><br>
-					<a href="#">Karriere</a><br>
+
+			<!-- Slide #5 Advantages / Ihre Vorteile -->
+
+			<div class="slide advantages slide-style-list">
+				<div class="intro">
+					<div class="img-background">
+						<div class="col-12 content">
+							<h3>Ihre</h3>
+							<h1>Vorteile</h1>
+						</div>
+					</div>
+					<div class="col-12 content">
+						<div class="element row align-items-center justify-content-center">
+							<div class="col-5">
+								<img class="img-fluid" src="assets/img/icons/customers@2x.png" alt="Icon von Kunden">
+							</div>
+							<div class="col-7">
+								<div class="row align-items-end justify-content-center text-left">
+									<div class="col-12">
+										<p class="hightlight">
+											Kunden-
+										</p>
+									</div>
+									<div class="col-12">
+										zufriedenheit
+									</div>
+							</div>
+						</div>
+					</div>
+						<div class="element row align-items-center justify-content-center">
+							<div class="col-5">
+								<img class="img-fluid" src="assets/img/icons/everything@2x.png" alt="Icon einem Computer">
+							</div>
+							<div class="col-7">
+								<div class="row align-items-end justify-content-center text-left">
+									<div class="col-12">
+										<p class="hightlight">
+											Alles
+										</p>
+									</div>
+									<div class="col-12">
+										auf einen Blick
+									</div>
+							</div>
+						</div>
+					</div>
+						<div class="element row align-items-center justify-content-center">
+							<div class="col-5">
+								<img class="img-fluid" src="assets/img/icons/costs@2x.png" alt="Icon eines Sparschweines">
+							</div>
+							<div class="col-7">
+								<div class="row text-left">
+									<div class="col-12">
+										<p class="hightlight">
+											Kosten-
+										</p>
+									</div>
+									<div class="col-12">
+										ersparnis
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="part">
-					<a href="#">Social</a><br>
-					<a href="#">Facebook</a><br>
-					<a href="#">Twitter</a><br>
-					<a href="#">LinkedIn</a><br>
+			</div>
+
+
+			<!-- Slide #6 Customer / Kundenzufriedenheit -->
+			<div class="slide customer slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-9">
+						<img class="img-fluid" src="assets/img/icons/customers@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h1 class="headline text-left">Kunden-</h1>
+							<h2 class="text-left">zufriedenheit</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Mit VIME geben Sie Ihren Kunden die Wahl. Ob gemütlich vom Sofa zuhause oder direkt vor Ort – Sie können Ihren Kunden das höchstmögliche Maß an Service bieten und damit auch die Rubrik „sieht anders aus als vorgestellt“ vom Retourenschein streichen. Materialen und Struktur können von uns so exakt und in hoher Qualität visualisiert werden, dass sie auf dem Monitor zu leben beginnen.</p>
+					</div>
 				</div>
-				<div class="part">
-					<a href="#">Rechtliches</a><br>
-					<a href="#">Impressum</a><br>
-					<a href="#">Datenschutz</a><br>
-					<a href="#">Sitemap</a><br>
+			</div>
+
+			<!-- Slide #7 Everything / Alles auf einen Blick -->
+			<div class="slide everything slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-9">
+						<img class="img-fluid" src="assets/img/icons/everything@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h1 class="headline text-left">Alles</h1>
+							<h2 class="text-left">auf einen Blick</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Alle Daten werden in einer zentralen Datenbank verwaltet, die einfach zu handhaben und zu pflegen ist. Sollten sich Ihre Anforderungen über die Zeit verändern, wächst Ihre Datenbank mit Ihren Bedürfnissen und kann in verschiedene Richtungen, wie Augmented Reality, erweitert werden.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Slide #8 Costs / Kostenersparnis -->
+			<div class="slide costs slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-6">
+						<img class="img-fluid" src="assets/img/icons/costs@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="text-left">Kosten-</h2>
+							<h1 class="headline text-left">ersparnis</h1>
+						</div>
+					<div class="col-12 content">
+						<p>Sie führen ein Produkt in zehn, hundert oder tausend verschiedenen Ausführungen und möchten Ihren Kunden alle Varianten online präsentieren, ohne für jede ein Foto machen zu müssen? Dann haben wir gute Neuigkeiten für Sie: Ihr Produkt wird einmalig bei Ihnen vor Ort erfasst und Ihr Kunde kann online seine Lieblingsvariation auswählen. Die 3D Animationen lassen sich außerdem einfach in Ihre Website integrieren und sogar als Fotos im gewünschten Umfeld in den Printkatalog einfügen.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	<!-- 2___ Abschnitt Team -->
+
+	<!-- Slide #1 Übersicht -->
+		<div class="section section-team" id="section1">
+			<div class="slide slide-team-overview">
+				<div class="content">
+					<h2>Team</h2>
+					<div class="intro team">
+						<div class="team-item col-6 col-lg-3">
+							<div class="overlay_text">
+								<h3 style="transform: translateX(-40%);">Mykolas</h3>
+								<h3 style="transform: translateX(-10%);">Parulskis</h3>
+							</div>
+							<img class="img-fluid" src="assets/img/team/employee_overview.png">
+						</div>
+						<div class="team-item col-6 col-lg-3">
+							<div class="overlay_text">
+								<h3 style="transform: translateX(-40%);">Rüdiger</h3>
+								<h3 style="transform: translateX(-10%);">Wenski</h3>
+							</div>
+							<img class="img-fluid" src="assets/img/team/employee_overview.png">
+						</div>
+						<div class="team-item col-6 col-lg-3">
+							<div class="overlay_text">
+								<h3 style="transform: translateX(-50%);">Götz Moritz</h3>
+								<h3 style="transform: translateX(-30%);">Bongartz</h3>
+							</div>
+							<img class="img-fluid" src="assets/img/team/employee_overview.png">
+						</div>
+						<div class="team-item col-6 col-lg-3">
+							<div class="overlay_text">
+								<h3 style="transform: translateX(-50%);">Adrian Kevin</h3>
+								<h3 style="transform: translateX(-30%);">Equisoain</h3>
+							</div>
+							<img class="img-fluid" src="assets/img/team/employee_overview.png">
+						</div>
+						<div class="team-item col-6 col-lg-3">
+							<div class="overlay_text">
+								<h3 style="transform: translateX(-20%);">Meike</h3>
+								<h3 style="transform: translateX(80%);">Beine</h3>
+							</div>
+							<img class="img-fluid" src="assets/img/team/employee_overview.png">
+						</div>
+						<div class="team-item col-6 col-lg-3">
+							<div class="overlay_text">
+								<h3 style="transform: translateX(-20%);">Xueya</h3>
+								<h3 style="transform: translateX(70%);">Long</h3>
+							</div>
+							<img class="img-fluid" src="assets/img/team/employee_overview.png">
+						</div>
+						<div class="team-item col-6 col-lg-3">
+							<div class="overlay_text">
+								<h3 style="transform: translateX(-40%);">Andreas</h3>
+								<h3 style="transform: translateX(20%);">Diebold</h3>
+							</div>
+							<img class="img-fluid" src="assets/img/team/employee_overview.png">
+						</div>
+						<div class="team-item col-6 col-lg-3">
+							<div class="overlay_text">
+								<h3 style="transform: translateX(-60%);">Elisa</h3>
+								<h3 style="transform: translateX(-20%);">Wohlfahrt</h3>
+							</div>
+							<img class="img-fluid" src="assets/img/team/employee_overview.png">
+						</div>
+					</div>
+					<button type="button" class="shuffle"><i class="fas fa-random"></i></button>
+				</div>
+			</div>
+
+			<!-- Slide #2 Detail -->
+			<!-- Slide #2-1 Andreas Diebold -->
+			<div class="slide">
+				<div class="slide-team-member">
+					<div class="content">
+						<div class="member-text">
+							<h3 class="subline">Andreas</h3>
+							<h2 class="lastname">Diebold</h2>
+							<h3 class="subline">Head of Vime</h3>
+						</div>
+					</div>
+					<img class="img-fluid member-img" src="assets/img/team/employee_detail.png">
+				</div>
+			</div>
+			<div class="slide">
+				<div class="slide-team-member">
+					<div class="content">
+						<div class="member-text">
+							<h3 class="subline">Andreas</h3>
+							<h2 class="lastname">Diebold</h2>
+							<h3 class="subline">Head of Vime</h3>
+						</div>
+					</div>
+					<img class="img-fluid member-img" src="assets/img/team/employee_detail.png">
+				</div>
+			</div>
+			<div class="slide">
+				<div class="slide-team-member">
+					<div class="content">
+						<div class="member-text">
+							<h3 class="subline">Andreas</h3>
+							<h2 class="lastname">Diebold</h2>
+							<h3 class="subline">Head of Vime</h3>
+						</div>
+					</div>
+					<img class="img-fluid member-img" src="assets/img/team/employee_detail.png">
+				</div>
+			</div>
+		</div>
+		<div class="section section-kontakt" id="section2">
+			<div class="content">
+				<h2>Kontakt</h2>
+				<p>vime | Mohn Media<br> Carl-Bertelsmann-Str. 131<br> 33330 Gütersloh
+				</p>
+				<p>+49(0)5241-80-0<br> +49(0)5241-80-62321
+					<br> info@vime.de
+				</p>
+
+				<div class="bottom_nav">
+					<div class="part">
+						<a href="#">Unternehmen</a><br>
+						<a href="#">Mohn Media</a><br>
+						<a href="#">Bertelsmann</a><br>
+						<a href="#">Karriere</a><br>
+					</div>
+					<div class="part">
+						<a href="#">Social</a><br>
+						<a href="#">Facebook</a><br>
+						<a href="#">Twitter</a><br>
+						<a href="#">LinkedIn</a><br>
+					</div>
+					<div class="part">
+						<a href="#">Rechtliches</a><br>
+						<a href="#">Impressum</a><br>
+						<a href="#">Datenschutz</a><br>
+						<a href="#">Sitemap</a><br>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
 </body>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$(".shuffle").click(function(){
-			$(".team").html($(".team .team-item").sort(function(){
-			    return Math.random()-0.5;
+		$(".shuffle").click(function() {
+			$(".team").html($(".team .team-item").sort(function() {
+				return Math.random() - 0.5;
 
-				}));
-			});
-			$(".team").html($(".team .team-item").sort(function(){
-			    return Math.random()-0.5;
 			}));
+		});
+		$(".team").html($(".team .team-item").sort(function() {
+			return Math.random() - 0.5;
+		}));
 	});
 </script>
 
