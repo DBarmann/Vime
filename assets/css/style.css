@@ -132,7 +132,7 @@ body{
 
 .content{
   max-width: 500px;
-  padding: 40px;
+  padding: 20px 40px;
   margin: 0px auto;
 }
 
@@ -187,13 +187,20 @@ body{
 
 }
 
+
+
+/**************** ABSCHNITT Online */
+.online .content, .carefree .content{
+  padding: 10px 40px;
+}
+
 /**************** ABSCHNITT Team ************/
 
 
 /* Section Team */
 
 .section-team .content{
-  padding: 50px 30px;
+  padding: 20px 30px;
   height: 100%;
 }
 
@@ -216,6 +223,7 @@ body{
 .team{
   margin-top: -70px;
   width: 100%;
+
 }
 
 .team .team-item {
@@ -238,7 +246,7 @@ body{
   z-index: 5;
   position: absolute;
   bottom: 0px;
-  margin-bottom: 5%;
+  margin-bottom: 10vh;
 }
 
 .lastname, .subline{
@@ -287,6 +295,53 @@ body{
 .slide-team-member .subline{
   font-weight: 600;
     font-size: 32px;
+}
+
+.slide-team-member{
+  height: 100%;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide-team-member.team-andreas{
+  background-image:
+  url(../img/team/detail/andreas_employee_detail.png);
+}
+
+.slide-team-member.team-adrian{
+  background-image:
+  url(../img/team/detail/adrian_employee_detail.png);
+}
+
+.slide-team-member.team-elisa{
+  background-image:
+  url(../img/team/detail/elisa_employee_detail.png);
+}
+
+.slide-team-member.team-goetz{
+  background-image:
+  url(../img/team/detail/goetz_employee_detail.png);
+}
+
+.slide-team-member.team-ruediger{
+  background-image:
+  url(../img/team/detail/ruediger_employee_detail.png);
+}
+
+.slide-team-member.team-mykolas{
+  background-image:
+  url(../img/team/detail/mykolas_employee_detail.png);
+}
+
+.slide-team-member.team-meike{
+  background-image:
+  url(../img/team/detail/meike_employee_detail.png);
+}
+
+.slide-team-member.team-xueya{
+  background-image:
+  url(../img/team/detail/xueya_employee_detail.png);
 }
 
 /* Image Background */
@@ -434,7 +489,9 @@ img{
 /***** iPhone X - Anpassung */
 @media (min-height: 800px){
 
-
+  .section-team .content {
+      padding: 50px 30px;
+  }
 /*************** Ihre Vorteile ********************/
 
 .slide-style-list .element{
@@ -465,9 +522,6 @@ img{
 }
 
 
-
-
-
 /**************** ABSCHNITT Team ************/
 
 
@@ -486,7 +540,15 @@ img{
     margin-right: 15%;
   }
 
+  .team .team-item{
+    padding: 0px;
+  }
+
   /* Section Detail */
+
+  .slide-team-member{
+    background-size: contain;
+  }
 
   .slide-team-member .lastname{
     font-size: 120px;
