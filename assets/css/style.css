@@ -495,7 +495,7 @@ img{
 /*************** Ihre Vorteile ********************/
 
 .slide-style-list .element{
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 
@@ -521,6 +521,27 @@ img{
     top: 50%;
 }
 
+
+h1{
+  font-size: 100px;
+  line-height: 1.1;
+}
+
+h1.big_headline{
+   font-size: 170px;
+}
+
+h1.headline{
+  font-size: 95px;
+}
+
+h2{
+font-size: 4vw;
+}
+
+h3{
+  font-size: 30px;
+}
 
 /**************** ABSCHNITT Team ************/
 
