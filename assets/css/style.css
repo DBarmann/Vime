@@ -200,7 +200,7 @@ body{
 /* Section Team */
 
 .section-team .content{
-  padding: 20px 30px;
+  padding: 10px 30px;
   height: 100%;
 }
 
@@ -208,8 +208,13 @@ body{
   float: right;
   color: #fff;
   font-size: 30px;
+  background-color: transparent!important;
+  border: none;
   margin-right: 18%;
 }
+}
+
+
 
 .section-team .content button:active{
   color: #333;
@@ -221,7 +226,7 @@ body{
 }
 
 .team{
-  margin-top: -70px;
+  margin-top: -80px;
   width: 100%;
 
 }
@@ -229,6 +234,7 @@ body{
 .team .team-item {
   width: 50%;
   float: left;
+  height: 17vh;
 }
 
 .team .team-item:nth-of-type(odd) {
@@ -402,13 +408,11 @@ img{
 .navigation{
   position: fixed;
   width: 100%;
-  padding: 20px 20px;
+  padding: 5px 20px;
   z-index: 200;
 }
 
-.navigation li{
 
-}
 
 .navigation a{
     font-weight: 200;
@@ -450,7 +454,7 @@ img{
 /* Kontakt */
 
 .section-kontakt .content{
-  padding: 50px 30px;
+  padding: 10px 30px;
   height: 100%;
 }
 
@@ -490,7 +494,7 @@ img{
 @media (min-height: 800px){
 
   .section-team .content {
-      padding: 50px 30px;
+      padding: 20px 30px;
   }
 /*************** Ihre Vorteile ********************/
 
@@ -556,7 +560,7 @@ h3{
   }
 
   .section-team .content .shuffle{
-    background-color: transparent;
+    background-color: transparent!important;
     border: none;
     margin-right: 15%;
   }
