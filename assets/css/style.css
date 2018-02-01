@@ -66,9 +66,9 @@ h1, h2, h3, h4, h5{
 }
 
 p{
-  margin: 20px 0px 20px 0px;
+  margin: 5px 0px 5px 0px;
   font-weight: 200;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 p.big_text{
@@ -81,10 +81,15 @@ p.hightlight{
 
 }
 
+a{
+  color: #fff;
+
+}
+
 /* Abschnitt - Headlines */
 
 h1{
-  font-size: 60px;
+  font-size: 50px;
   margin: 0px auto;
   line-height: 1.1;
 }
@@ -112,6 +117,33 @@ h1.icon.big{
 }
 
 /* Abschnitte */
+
+#overlay{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  z-index: 9999;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: linear-gradient(to right, #015799 0%,#0b96d5 100%);
+}
+
+#overlay .col-3{
+  margin-bottom: 10vh;
+}
+
+
+
+#overlay img{
+  mix-blend-mode: normal;
+}
 
 body{
   background: #015799; /* Old browsers */
@@ -210,7 +242,8 @@ body{
   font-size: 30px;
   background-color: transparent!important;
   border: none;
-  margin-right: 18%;
+  margin-right: 16%;
+  margin-top: 3vh;
 }
 }
 
@@ -234,11 +267,11 @@ body{
 .team .team-item {
   width: 50%;
   float: left;
-  height: 17vh;
+  height: 16vh;
 }
 
 .team .team-item:nth-of-type(odd) {
-  top: 80px;
+  top: 60px;
   position: relative;
 }
 
@@ -396,6 +429,7 @@ img{
 
 
 .element{
+  cursor: pointer;
   text-align: center;;
 }
 
@@ -475,7 +509,7 @@ img{
 }
 
 .section-kontakt .bottom_nav .part{
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .section-kontakt .bottom_nav a{
@@ -514,7 +548,29 @@ img{
 
 }
 
+/* Orientation-Lock */
 
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 812px)
+and (orientation : landscape) {
+
+    div#overlay{
+      pointer-events: none;
+      display: flex;
+    }
+
+    #fullpage{
+      pointer-events: none;
+    }
+}
+
+
+
+@media (min-height: 680px){
+
+
+}
 
 @media (min-width: 992px){
 
@@ -547,6 +603,10 @@ h3{
   font-size: 30px;
 }
 
+p{
+  font-size: 14px;
+}
+
 /**************** ABSCHNITT Team ************/
 
 
@@ -567,6 +627,7 @@ h3{
 
   .team .team-item{
     padding: 0px;
+    height: 25vh;
   }
 
   /* Section Detail */
