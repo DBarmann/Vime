@@ -6,6 +6,7 @@ Verlauf
 
 */
 *{
+
   box-sizing: border-box;
 }
 
@@ -63,6 +64,7 @@ h1, h2, h3, h4, h5{
   font-weight: bold;
   text-align: center;
   letter-spacing: 2px;
+  isolation: isolate;
 }
 
 p{
@@ -139,18 +141,40 @@ h1.icon.big{
   margin-bottom: 10vh;
 }
 
-
+.img-overlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
 
 #overlay img{
   mix-blend-mode: normal;
 }
 
+html{
+  background-color: #fff;
+}
+
 body{
-  background: #015799; /* Old browsers */
-   background: -moz-linear-gradient(left, #015799 0%, #0b96d5 100%); /* FF3.6-15 */
-   background: -webkit-linear-gradient(left, #015799 0%,#0b96d5 100%); /* Chrome10-25,Safari5.1-6 */
-   background: linear-gradient(to right, #015799 0%,#0b96d5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ */
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#015799', endColorstr='#0b96d5',GradientType=1 ); /* IE6-9 */ */ */ */
+  background-color: #fff;
+}
+
+.fp-slidesContainer{
+  background: #015799;
+  background: -moz-linear-gradient(left, #015799 0%, #0b96d5 100%);
+  background: -webkit-linear-gradient(left, #015799 0%,#0b96d5 100%);
+  background: linear-gradient(to right, #015799 0%,#0b96d5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#015799', endColorstr='#0b96d5',GradientType=1 );
+}
+
+#fullpage{
+  background: #015799;
+  background: -moz-linear-gradient(left, #015799 0%, #0b96d5 100%);
+  background: -webkit-linear-gradient(left, #015799 0%,#0b96d5 100%);
+  background: linear-gradient(to right, #015799 0%,#0b96d5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#015799', endColorstr='#0b96d5',GradientType=1 );
 }
 
 .intro{
@@ -160,19 +184,18 @@ body{
 
 .section{
   background-color: none;
+
+}
+
+.blend{
+  isolation: isolate;
+  mix-blend-mode: multiply;
 }
 
 .content{
   max-width: 500px;
   padding: 20px 40px;
   margin: 0px auto;
-}
-
-
-/* Images */
-
-.img-fluid{
-
 }
 
 
@@ -400,16 +423,23 @@ img{
 
 .slide.welcome .img-background{
   background-image:
-  url(../img/bg/sofa_large.jpg),
-  url(../img/bg/dot_pattern.png),
-  linear-gradient(to right, #015799 0%,#0b96d5 100%);
+  url(../img/bg/wireframeLarge_multiply.png);
 }
 
 .slide.online .img-background{
-  background-image:
+  /* background-image:
   url(../img/bg/chair_large.jpg),
   url(../img/bg/dot_pattern.png),
-  linear-gradient(to right, #015799 0%,#0b96d5 100%);
+  linear-gradient(to right, #015799 0%,#0b96d5 100%); */
+}
+
+.blend-fix {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+  background: red;
+  mix-blend-mode: overlay;
 }
 
 .slide.carefree .img-background{

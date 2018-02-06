@@ -37,7 +37,7 @@
 				verticalCentered: true,
 				scrollingSpeed: 1000,
 				slidesNavigation: false,
-				paddingTop: '40px',
+				paddingTop: '0px',
 				dragAndMove: true,
 				slidesNavPosition: 'bottom',
 				navigationTooltips: ['firstSlide', 'secondSlide']
@@ -100,6 +100,7 @@
 			<div class="intro">
 				<div class="img-background">
 					<div class="col-12 content">
+						<img class="img-fluid blend img-overlay" src="assets/img/bg/sofa_large.jpg" />
 							<h3>Revolutionieren Sie Ihre</h3>
 							<h1>Online Präsenz</h1>
 						</div>
@@ -248,8 +249,8 @@
 	<!-- 2___ Abschnitt Team -->
 
 	<!-- Slide #1 Übersicht -->
-		<div class="section section-team" id="section1">
-			<div class="slide slide-team-overview">
+		<div class="section section-team"  id="section1">
+			<div data-anchor="slide-team" id="slide-team" class="slide slide-team-overview">
 				<div class="content">
 					<h2>Team</h2>
 					<div class="intro team">
@@ -309,18 +310,23 @@
 							</div>
 							<img class="img-fluid" src="assets/img/team/overview/elisa_employee_overview@2x.png">
 						</div>
-							<button type="button" class="btn shuffle"><i class="shuffle fas fa-random"></i></button>
 					</div>
+										<a id="backToOverview" href="#team/slide-team"></a>
+					<button type="button" class="btn shuffle"><i class="shuffle fas fa-random"></i></button>
+
 				</div>
 			</div>
 
 			<!-- Slide #2 Detail -->
 			<!-- Slide #2-1 Andreas Diebold -->
 			<div class="team-detail">
+
 				<div class="slide">
+
 					<div class="slide-team-member team-andreas">
 							<div class="content">
 								<div class="member-text">
+									<a href="#team/slide-team">link</a>
 									<h3 class="subline">Andreas</h3>
 									<h2 class="lastname">Diebold</h2>
 									<h3 class="subline">Head of Vime</h3>
@@ -358,7 +364,8 @@
 								<h2 class="lastname">Bongartz</h2>
 								<h3 class="subline">Technischer Leiter</h3>
 							</div>
-						</div>					</div>
+						</div>
+					</div>
 				</div>
 				<div class="slide">
 					<div class="slide-team-member team-ruediger">
@@ -455,15 +462,17 @@
 </body>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$(".shuffle").click(function() {
+		$(document).on('click', '.shuffle', function() {
 			$(".team").html($(".team .team-item").sort(function() {
 				return Math.random() - 0.5;
 			}));
 			$(".section-team .fp-slides .fp-slidesContainer").html($(".section-team .fp-slidesContainer .slide").sort(function() {
 				return Math.random() - 0.5;
+						document.getElementById("backToOverview").click()
 			}));
 		});
 	});
+
 
 	$(document).on('click', '#moveToCustomer', function(){
   $.fn.fullpage.moveTo(1, 5);
