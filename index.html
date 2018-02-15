@@ -27,27 +27,63 @@
 
 	<link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
 	<script src="assets/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+
+	function randomTeam(){
+
+		var team_members = $();
+		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-adrian'><div class='content'><div class='member-text'><h3 class='subline'>Adrian Kevin</h3><h2 class='lastname'>Equisoain</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-elisa'><div class='content'><div class='member-text'><h3 class='subline'>Elisa</h3><h2 class='lastname'>Wohlfahrt</h2><h3 class='subline'>User Experience<br />Designer</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-andreas'><div class='content'><div class='member-text'><h3 class='subline'>Andreas</h3><h2 class='lastname'>Diebold</h2><h3 class='subline'>Head of Vime</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-goetz'><div class='content'><div class='member-text'><h3 class='subline'>Götz Moritz</h3><h2 class='lastname'>Bongartz</h2><h3 class='subline'>Technischer Leiter</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-ruediger'><div class='content'><div class='member-text'><h3 class='subline'>Rüdiger</h3><h2 class='lastname'>Wenski</h2><h3 class='subline'>Systemingenieur</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-mykolas'><div class='content'><div class='member-text'><h3 class='subline'>Mykolas</h3><h2 class='lastname'>Parulskis</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-meike'><div class='content'><div class='member-text'><h3 class='subline'>Meike</h3><h2 class='lastname'>Beine</h2><h3 class='subline'>Kundenmanagerin</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-xueya'><div class='content'><div class='member-text'><h3 class='subline'>Xueya</h3><h2 class='lastname'>Long</h2><h3 class='subline'>Systemingenieur</h3></div></div></div></div>");
+
+		team_members.sort(function() { return 0.5 - Math.random() });
+	 	$(".team-detail").append(team_members);
+
+	}
+	$(document).ready(function() {
+			randomTeam();
+	})
+	</script>
 	<script type="text/javascript" src="assets/fullpage/jquery.fullPage.js"></script>
 	<script type="text/javascript">
+	function createFullpage(){
+
+		$('#fullpage').fullpage({
+			anchors: ['home', 'team', 'contact'],
+			menu: '#menu',
+			controlArrows: true,
+			verticalCentered: true,
+			scrollingSpeed: 1000,
+			slidesNavigation: false,
+			paddingTop: '50px',
+			dragAndMove: true,
+			slidesNavPosition: 'bottom',
+			navigationTooltips: ['firstSlide', 'secondSlide']
+		});
+	}
 		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				anchors: ['home', 'team', 'contact'],
-				menu: '#menu',
-				controlArrows: true,
-				verticalCentered: true,
-				scrollingSpeed: 1000,
-				slidesNavigation: false,
-				paddingTop: '0px',
-				dragAndMove: true,
-				slidesNavPosition: 'bottom',
-				navigationTooltips: ['firstSlide', 'secondSlide']
-			});
+			createFullpage();
+		});
+
+		$(document).on('click', '.shuffle', function() {
+			$(".team").html($(".team .team-item").sort(function() {
+				return Math.random() - 0.5;
+			}));
+
+			$.fn.fullpage.destroy('all');
+			$(".section-team .slide").not(':first').remove();
+			randomTeam();
+			createFullpage();
 		});
 	</script>
 </head>
 
 <body>
-
 	<section class="navigation">
 		<ul id="menu" class="nav justify-content-center">
 			<li data-menuanchor="team" class="nav-item col-4">
@@ -100,7 +136,6 @@
 			<div class="intro">
 				<div class="img-background">
 					<div class="col-12 content">
-						<img class="img-fluid blend img-overlay" src="assets/img/bg/sofa_large.jpg" />
 							<h3>Revolutionieren Sie Ihre</h3>
 							<h1>Online Präsenz</h1>
 						</div>
@@ -320,99 +355,6 @@
 			<!-- Slide #2 Detail -->
 			<!-- Slide #2-1 Andreas Diebold -->
 			<div class="team-detail">
-
-				<div class="slide">
-
-					<div class="slide-team-member team-andreas">
-							<div class="content">
-								<div class="member-text">
-									<h3 class="subline">Andreas</h3>
-									<h2 class="lastname">Diebold</h2>
-									<h3 class="subline">Head of Vime</h3>
-								</div>
-							</div>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="slide-team-member team-adrian">
-						<div class="content">
-							<div class="member-text">
-								<h3 class="subline">Adrian Kevin</h3>
-								<h2 class="lastname">Equisoain</h2>
-								<h3 class="subline">3D Artist</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="slide-team-member team-elisa">
-						<div class="content">
-							<div class="member-text">
-								<h3 class="subline">Elisa</h3>
-								<h2 class="lastname">Wohlfahrt</h2>
-								<h3 class="subline">User Experience<br />Designer</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="slide-team-member team-goetz">
-						<div class="content">
-							<div class="member-text">
-								<h3 class="subline">Götz Moritz</h3>
-								<h2 class="lastname">Bongartz</h2>
-								<h3 class="subline">Technischer Leiter</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="slide-team-member team-ruediger">
-						<div class="content">
-							<div class="member-text">
-								<h3 class="subline">Rüdiger</h3>
-								<h2 class="lastname">Wenski</h2>
-								<h3 class="subline">Systemingenieur</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="slide">
-					<div class="slide-team-member team-mykolas">
-						<div class="content">
-							<div class="member-text">
-								<h3 class="subline">Mykolas</h3>
-								<h2 class="lastname">Parulskis</h2>
-								<h3 class="subline">3D Artist</h3>
-							</div>
-						</div>
-						<img class="img-fluid member-img" src="assets/img/team/detail/mykolas_employee_detail.png">
-					</div>
-				</div>
-				<div class="slide">
-					<div class="slide-team-member team-meike">
-						<div class="content">
-							<div class="member-text">
-								<h3 class="subline">Meike</h3>
-								<h2 class="lastname">Beine</h2>
-								<h3 class="subline">Kundenmanagerin</h3>
-							</div>
-						</div>
-						<img class="img-fluid member-img" src="assets/img/team/detail/meike_employee_detail.png">
-					</div>
-				</div>
-				<div class="slide">
-					<div class="slide-team-member team-xueya">
-						<div class="content">
-							<div class="member-text">
-								<h3 class="subline">Xueya</h3>
-								<h2 class="lastname">Long</h2>
-								<h3 class="subline">Systemingenieur</h3>
-							</div>
-						</div>
-						<img class="img-fluid member-img" src="assets/img/team/detail/xueya_employee_detail.png">
-					</div>
-				</div>
 			</div>
 		</div>
 		<div class="section section-kontakt" id="section2">
@@ -461,26 +403,7 @@
 </body>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$(document).on('click', '.shuffle', function() {
-			$(".team").html($(".team .team-item").sort(function() {
-				return Math.random() - 0.5;
-			}));
-			$(".section-team .fp-slides .fp-slidesContainer").html($(".section-team .fp-slidesContainer .slide").sort(function() {
-				return Math.random() - 0.5;
-						document.getElementById("backToOverview").click()
-			}));
-		});
-	});
 
-
-	$(document).on('click', '#moveToCustomer', function(){
-  $.fn.fullpage.moveTo(1, 5);
-	});
-	$(document).on('click', '#moveToEverything', function(){
-	$.fn.fullpage.moveTo(1, 6);
-	});
-	$(document).on('click', '#moveToCosts', function(){
-	$.fn.fullpage.moveTo(1, 7);
 	});
 </script>
 

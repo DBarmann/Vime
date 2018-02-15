@@ -149,19 +149,8 @@ h1.icon.big{
   bottom: 0px;
 }
 
-#overlay img{
-  mix-blend-mode: normal;
-}
-
-html{
-  background-color: #fff;
-}
 
 body{
-  background-color: #fff;
-}
-
-.fp-slidesContainer{
   background: #015799;
   background: -moz-linear-gradient(left, #015799 0%, #0b96d5 100%);
   background: -webkit-linear-gradient(left, #015799 0%,#0b96d5 100%);
@@ -187,14 +176,10 @@ body{
 
 }
 
-.blend{
-  isolation: isolate;
-  mix-blend-mode: multiply;
-}
 
 .content{
   max-width: 500px;
-  padding: 20px 40px;
+  padding: 50px 40px;
   margin: 0px auto;
 }
 
@@ -268,8 +253,36 @@ body{
   margin-right: 16%;
   margin-top: 3vh;
 }
+
+.section-team .fp-slides .fp-slidesContainer{
+
+-ms-box-orient: horizontal;
+display: -webkit-box;
+display: -moz-box;
+display: -ms-flexbox;
+display: -moz-flex;
+display: -webkit-flex;
+display: flex;
 }
 
+/* .section-team .slide:nth-of-type(1){
+  order: 1
+}
+.section-team .slide:nth-of-type(2){
+  order: 3
+}
+.section-team .slide:nth-of-type(3){
+  order: 2
+}
+.section-team .slide:nth-of-type(4){
+  order: 4
+}
+.section-team .slide:nth-of-type(5){
+  order: 5
+}
+.section-team .slide:nth-of-type(6){
+  order: 6
+} */
 
 
 .section-team .content button:active{
@@ -408,9 +421,6 @@ body{
 
 /* Image Background */
 
-img{
-    mix-blend-mode: multiply;
-}
 
 .img-background{
   background-position: center;
@@ -427,33 +437,18 @@ img{
 }
 
 .slide.online .img-background{
-  /* background-image:
-  url(../img/bg/chair_large.jpg),
-  url(../img/bg/dot_pattern.png),
-  linear-gradient(to right, #015799 0%,#0b96d5 100%); */
-}
-
-.blend-fix {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  visibility: hidden;
-  background: red;
-  mix-blend-mode: overlay;
+  background-image:
+  url(../img/bg/wireframeLarge_multiply.png);
 }
 
 .slide.carefree .img-background{
   background-image:
-  url(../img/bg/chair_large.jpg),
-  url(../img/bg/dot_pattern.png),
-  linear-gradient(to right, #015799 0%,#0b96d5 100%);
+  url(../img/bg/wireframeLarge_multiply.png);
 }
 
 .slide.advantages .img-background{
   background-image:
-  url(../img/bg/chair_large.jpg),
-  url(../img/bg/dot_pattern.png),
-  linear-gradient(to right, #015799 0%,#0b96d5 100%);
+  url(../img/bg/wireframeLarge_multiply.png);
 }
 
 
@@ -518,7 +513,6 @@ img{
 /* Kontakt */
 
 .section-kontakt .content{
-  padding: 10px 30px;
   height: 100%;
 }
 
