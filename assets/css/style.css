@@ -525,7 +525,10 @@ display: flex;
   text-align: center;
   font-size: 12px;
   margin: 0 auto;
-
+  position: absolute;
+  bottom: 10vh;
+  right: 0px;
+  width: 100%;
 }
 
 .section-kontakt
