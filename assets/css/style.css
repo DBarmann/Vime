@@ -575,6 +575,12 @@ display: flex;
 
 /* Orientation-Lock */
 
+@media (max-width: 400px){
+   .section-kontakt .bottom_nav{
+        bottom: 21vh;
+    }
+}
+
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 812px)
