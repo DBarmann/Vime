@@ -470,7 +470,24 @@ display: flex;
   z-index: 200;
 }
 
+.language{
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  padding: 5px 20px;
+  z-index: 200;
+}
 
+.language a{
+  font-weight: 200;
+}
+.language a:hover{
+  color: #fff;
+}
+
+.language a .active{
+  font-weight: 600;
+}
 
 .navigation a{
     font-weight: 200;
