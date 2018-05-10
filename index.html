@@ -28,10 +28,10 @@
 	<link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
 	<script src="assets/jquery/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
+	var team_members = $();
 
 	function randomTeam(){
 
-		var team_members = $();
 		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-adrian'><div class='content'><div class='member-text'><h3 class='subline'>Adrian Kevin</h3><h2 class='lastname'>Equisoain</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
 		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-elisa'><div class='content'><div class='member-text'><h3 class='subline'>Elisa</h3><h2 class='lastname'>Wohlfahrt</h2><h3 class='subline'>User Experience<br />Designer</h3></div></div></div></div>");
 		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-andreas'><div class='content'><div class='member-text'><h3 class='subline'>Andreas</h3><h2 class='lastname'>Diebold</h2><h3 class='subline'>Head of Vime</h3></div></div></div></div>");
@@ -86,7 +86,9 @@
 
 <body>
 	<section class="navigation">
+
 		<ul id="menu" class="nav justify-content-center">
+
 			<li data-menuanchor="team" class="nav-item col-4">
 				<a class="nav-link" href="#contact">kontakt</a>
 			</li>
@@ -174,7 +176,7 @@
 
 			<!-- Slide #5 Advantages / Ihre Vorteile -->
 
-			<div class="slide advantages slide-style-list">
+			<div  data-anchor="test" class="slide advantages slide-style-list">
 				<div class="intro">
 					<div class="img-background">
 						<div class="col-12 content">
@@ -297,7 +299,7 @@
 				<div class="content">
 					<h2>Team</h2>
 					<div class="intro team">
-						<div class="team-item col-6 col-lg-3">
+						<div id="moveToPerson" class="team-item col-6 col-lg-3">
 							<div class="overlay_text">
 								<h3 style="transform: translateX(-40%);">Mykolas</h3>
 								<h3 style="transform: translateX(-10%);">Parulskis</h3>
@@ -405,7 +407,16 @@
 	$(document).on('click', '#moveToCosts', function(){
 	$.fn.fullpage.moveTo(1, 6);
 	});
+
 </script>
 
+
+<script type="text/javascript">
+	$(document).on('click', '#moveToPerson', function(){
+		$.each (team_members, function (index, value){
+					console.log(index);
+		})
+	});
+</script>
 
 </html>
