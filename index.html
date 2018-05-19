@@ -32,22 +32,44 @@
 
 	function randomTeam(){
 
-		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-adrian'><div class='content'><div class='member-text'><h3 class='subline'>Adrian Kevin</h3><h2 class='lastname'>Equisoain</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
-		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-elisa'><div class='content'><div class='member-text'><h3 class='subline'>Elisa</h3><h2 class='lastname'>Wohlfahrt</h2><h3 class='subline'>User Experience<br />Designer</h3></div></div></div></div>");
-		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-andreas'><div class='content'><div class='member-text'><h3 class='subline'>Andreas</h3><h2 class='lastname'>Diebold</h2><h3 class='subline'>Head of Vime</h3></div></div></div></div>");
-		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-goetz'><div class='content'><div class='member-text'><h3 class='subline'>Götz Moritz</h3><h2 class='lastname'>Bongartz</h2><h3 class='subline'>Technischer Leiter</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-adrian'><div class='content'><div class='member-text'><h3 class='subline'>Adrian Kevin</h3><h2 class='lastname'>Equisoain</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-elisa'><div class='content'><div class='member-text'><h3 class='subline'>Elisa</h3><h2 class='lastname'>Wohlfahrt</h2><h3 class='subline'>User Experience<br />Designer</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-andreas'><div class='content'><div class='member-text'><h3 class='subline'>Andreas</h3><h2 class='lastname'>Diebold</h2><h3 class='subline'>Head of Vime</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-goetz'><div class='content'><div class='member-text'><h3 class='subline'>Götz Moritz</h3><h2 class='lastname'>Bongartz</h2><h3 class='subline'>Technischer Leiter</h3></div></div></div></div>");
 		/*team_members = team_members.add("<div class='slide'><div class='slide-team-member team-ruediger'><div class='content'><div class='member-text'><h3 class='subline'>Rüdiger</h3><h2 class='lastname'>Wenski</h2><h3 class='subline'>Systemingenieur</h3></div></div></div></div>");*/
-		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-mykolas'><div class='content'><div class='member-text'><h3 class='subline'>Mykolas</h3><h2 class='lastname'>Parulskis</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
-		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-meike'><div class='content'><div class='member-text'><h3 class='subline'>Meike</h3><h2 class='lastname'>Beine</h2><h3 class='subline'>Kundenmanagerin</h3></div></div></div></div>");
-		team_members = team_members.add("<div class='slide'><div class='slide-team-member team-xueya'><div class='content'><div class='member-text'><h3 class='subline'>Xueya</h3><h2 class='lastname'>Long</h2><h3 class='subline'>Systemingenieur</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-mykolas'><div class='content'><div class='member-text'><h3 class='subline'>Mykolas</h3><h2 class='lastname'>Parulskis</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-meike'><div class='content'><div class='member-text'><h3 class='subline'>Meike</h3><h2 class='lastname'>Beine</h2><h3 class='subline'>Kundenmanagerin</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-xueya'><div class='content'><div class='member-text'><h3 class='subline'>Xueya</h3><h2 class='lastname'>Long</h2><h3 class='subline'>Systemingenieur</h3></div></div></div></div>");
 
 		team_members.sort(function() { return 0.5 - Math.random() });
 	 	$(".team-detail").append(team_members);
 
 	}
+
+	function moveTeam(position){
+
+		var counter = 0;
+
+		$('.team-slide').each(
+	      function()
+	      {
+	        counter++;
+	        if($(this).has('.team-'+position).length){
+						console.log(counter);
+						$.fn.fullpage.moveTo('team', counter);
+						return false;
+					};
+	      }
+	    );
+	};
+
+
 	$(document).ready(function() {
 			randomTeam();
 	})
+
+
+
 	</script>
 	<script type="text/javascript" src="assets/fullpage/jquery.fullPage.js"></script>
 	<script type="text/javascript">
@@ -294,12 +316,12 @@
 	<!-- 2___ Abschnitt Team -->
 
 	<!-- Slide #1 Übersicht -->
-		<div class="section section-team"  id="section1">
+		<<div class="section section-team" id="section1">
 			<div data-anchor="slide-team" id="slide-team" class="slide slide-team-overview">
 				<div class="content">
 					<h2>Team</h2>
 					<div class="intro team">
-						<div id="moveToPerson" class="team-item col-6 col-lg-3">
+						<div class="team-item col-6 col-lg-3 moveTeam" onclick="moveTeam('mykolas')">
 							<div class="overlay_text">
 								<h3 style="transform: translateX(-40%);">Mykolas</h3>
 								<h3 style="transform: translateX(-10%);">Parulskis</h3>
@@ -311,44 +333,44 @@
 								<h3 style="transform: translateX(-40%);">Rüdiger</h3>
 								<h3 style="transform: translateX(-10%);">Wenski</h3>
 							</div>
-							<img class="img-fluid" src="assets/img/team/overview/ruediger_employee_overview@2x.png">
+							<img class="img-fluid" src="../assets/img/team/overview/ruediger_employee_overview@2x.png">
 						</div> -->
-						<div class="team-item col-6 col-lg-3">
+						<div class="team-item col-6 col-lg-3" onclick="moveTeam('goetz')">
 							<div class="overlay_text">
 								<h3 style="transform: translateX(-50%);">Götz Moritz</h3>
 								<h3 style="transform: translateX(-30%);">Bongartz</h3>
 							</div>
 							<img class="img-fluid" src="assets/img/team/overview/goetz_employee_overview@2x.png">
 						</div>
-						<div class="team-item col-6 col-lg-3">
+						<div class="team-item col-6 col-lg-3" onclick="moveTeam('adrian')">
 							<div class="overlay_text">
 								<h3 style="transform: translateX(-50%);">Adrian Kevin</h3>
 								<h3 style="transform: translateX(-30%);">Equisoain</h3>
 							</div>
 							<img class="img-fluid" src="assets/img/team/overview/adrian_employee_overview@2x.png">
 						</div>
-						<div class="team-item col-6 col-lg-3">
+						<div class="team-item col-6 col-lg-3" onclick="moveTeam('meike')">
 							<div class="overlay_text">
 								<h3 style="transform: translateX(-20%);">Meike</h3>
 								<h3 style="transform: translateX(80%);">Beine</h3>
 							</div>
 							<img class="img-fluid" src="assets/img/team/overview/meike_employee_overview@2x.png">
 						</div>
-						<div class="team-item col-6 col-lg-3">
+						<div class="team-item col-6 col-lg-3" onclick="moveTeam('xueya')">
 							<div class="overlay_text">
 								<h3 style="transform: translateX(-20%);">Xueya</h3>
 								<h3 style="transform: translateX(70%);">Long</h3>
 							</div>
 							<img class="img-fluid" src="assets/img/team/overview/xueya_employee_overview@2x.png">
 						</div>
-						<div class="team-item col-6 col-lg-3">
+						<div class="team-item col-6 col-lg-3" onclick="moveTeam('andreas')">
 							<div class="overlay_text">
 								<h3 style="transform: translateX(-40%);">Andreas</h3>
 								<h3 style="transform: translateX(20%);">Diebold</h3>
 							</div>
 							<img class="img-fluid" src="assets/img/team/overview/andreas_employee_overview@2x.png">
 						</div>
-						<div class="team-item col-6 col-lg-3">
+						<div class="team-item col-6 col-lg-3" onclick="moveTeam('elisa')">
 							<div class="overlay_text">
 								<h3 style="transform: translateX(-60%);">Elisa</h3>
 								<h3 style="transform: translateX(-20%);">Wohlfahrt</h3>
@@ -366,7 +388,7 @@
 			<!-- Slide #2-1 Andreas Diebold -->
 			<div class="team-detail">
 			</div>
-		</div>
+		</div>>
 		<div class="section section-kontakt" id="section2">
 			<div class="content row">
 				<div class="row">
