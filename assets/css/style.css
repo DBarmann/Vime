@@ -303,6 +303,7 @@ display: flex;
   width: 50%;
   float: left;
   height: 16vh;
+  cursor: pointer;
 }
 
 .team .team-item:nth-of-type(odd) {
