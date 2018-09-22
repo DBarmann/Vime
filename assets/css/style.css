@@ -60,6 +60,11 @@ body{
 }
 
 
+.section_grey{
+  color: #7C7C7C;
+}
+
+
 h1, h2, h3, h4, h5{
   font-weight: bold;
   text-align: center;
@@ -175,6 +180,23 @@ body{
 
 }
 
+.section_orange{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f57f51+0,ffbb00+100 */
+background: rgb(245,127,81); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(245,127,81,1) 0%, rgba(255,187,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(245,127,81,1) 0%,rgba(255,187,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(245,127,81,1) 0%,rgba(255,187,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f57f51', endColorstr='#ffbb00',GradientType=1 ); /* IE6-9 */
+}
+
+.section_grey{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3f3f3+0,dedede+100 */
+background: rgb(243,243,243); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(243,243,243,1) 0%, rgba(222,222,222,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(243,243,243,1) 0%,rgba(222,222,222,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(243,243,243,1) 0%,rgba(222,222,222,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#dedede',GradientType=1 ); /* IE6-9 */
+}
 
 .content{
   max-width: 550px;
@@ -328,6 +350,31 @@ display: flex;
     text-align: left;
     margin: 0px;
     line-height: 1.0;
+}
+
+
+/* Slide Welcom */
+
+.slide.welcome h3{
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.slide.welcome h4{
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+.text-right h4, .text-right h3{
+  text-align: right;
+}
+
+.text-left h4, .text-left h3{
+  text-left: left;
+}
+
+.logo_welcome{
+  cursor: pointer;
 }
 
 /* Slide Übersicht */
@@ -508,8 +555,8 @@ display: flex;
     border: none;
     position: absolute;
     top: 100%;
-    width: 15px!important; /* This can be added here so you don't have to set a width and height 2 times for each arrow, this will create one width for both arrows */
-    height: 15px!important; /* This does the same as above */
+    width: 35px!important; /* This can be added here so you don't have to set a width and height 2 times for each arrow, this will create one width for both arrows */
+    height: 35px!important; /* This does the same as above */
     z-index: 4;
     cursor: pointer;
 }
@@ -597,6 +644,13 @@ display: flex;
    .section-kontakt .bottom_nav{
         bottom: 21vh;
     }
+
+    .fp-controlArrow {
+
+        width: 15px!important; /* This can be added here so you don't have to set a width and height 2 times for each arrow, this will create one width for both arrows */
+        height: 15px!important; /* This does the same as above */
+
+    }
 }
 
 @media only screen
@@ -650,7 +704,7 @@ h1.headline{
 }
 
 h2{
-font-size: 4vw;
+font-size: 3.3vw;
 }
 
 h3{

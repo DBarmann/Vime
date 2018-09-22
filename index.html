@@ -75,7 +75,7 @@
 	function createFullpage(){
 
 		$('#fullpage').fullpage({
-			anchors: ['home', 'team', 'contact'],
+			anchors: ['home', 'furniture', 'book', 'team', 'contact'],
 			menu: '#menu',
 			controlArrows: true,
 			verticalCentered: true,
@@ -113,7 +113,7 @@
 			<li data-menuanchor="team" class="nav-item col-4">
 				<a class="nav-link" href="#contact">kontakt</a>
 			</li>
-			<li data-menuanchor="home" class="nav-item col-4">
+			<li data-menuanchor="home" class="nav-item col-4" id="moveToHome">
 				<a class="nav-link active" href="#home"><img class="img-fluid"  style="height: 30px" src="assets/img/logo.svg"></a>
 			</li>
 			<li data-menuanchor="contact" class="nav-item col-4">
@@ -139,6 +139,42 @@
 		</div>
 	</div>
 	<div id="fullpage">
+
+		<div class="section section_grey" id="section0">
+			<!-- <div class="slide">
+				<div class="row">
+					<div class="layer content">
+						<h1 class="icon big">
+							<i class="fas fa-play"></i>
+						</h1>
+					</div>
+				</div>
+			</div> -->
+			<div class="slide welcome">
+					<div class="intro">
+							<div class="col-12 content">
+								<h3>Welcome to</h3>
+								<h1 class="big_headline uppercase">Vime</h1>
+								<h3 class="uppercase">Virtual Media<br></h1>
+						</div>
+					<div class="col-12 content">
+						<div class="row">
+							<div id="moveToFurniture" class="col-6 text-right logo_welcome">
+								<img class="pull-right" class="" src="assets/img/logos/FurnitureBase.png" />
+								<h3>FurnitureBase</h3>
+								<h4>Möbelvisualisierung</h4>
+							</div>
+							<div id="moveToBook" class="col-6 text-left logo_welcome">
+								<img class="pull-left" src="assets/img/logos/BookBase.png" />
+								<h3>BookBase</h3>
+								<h4>Covervisualisierung</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="section" id="section0">
 			<!-- <div class="slide">
 				<div class="row">
@@ -154,8 +190,7 @@
 					<div class="img-background">
 						<div class="col-12 content">
 							<h3>Willkommen bei</h3>
-							<h1 class="big_headline uppercase">Vime</h1>
-							<h3 class="uppercase">Virtual Media<br></h1>
+							<h1>Furniture Base</h1>
 					</div>
 				</div>
 				<div class="col-12 content">
@@ -312,10 +347,213 @@
 
 		</div>
 
+		<div class="section section_orange" id="section0">
+			<!-- <div class="slide">
+				<div class="row">
+					<div class="layer content">
+						<h1 class="icon big">
+							<i class="fas fa-play"></i>
+						</h1>
+					</div>
+				</div>
+			</div> -->
+			<div class="slide welcome">
+				<div class="intro">
+					<div class="img-background">
+						<div class="col-12 content">
+							<h3>Willkommen bei</h3>
+							<h1>BookBase</h1>
+					</div>
+				</div>
+				<div class="col-12 content">
+					<p class="big_text">Sie kennen das? Sie haben dieses wunderbar geschreinerte Möbelstück in ihrem Geschäft, aber online kommt die Qualität „nicht so ganz rüber”?</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Slide #5 Advantages / Ihre Vorteile -->
+
+		<div  data-anchor="test" class="slide advantages slide-style-list">
+			<div class="intro">
+				<div class="img-background">
+					<div class="col-12 content">
+						<h3>Ihre</h3>
+						<h1>Vorteile</h1>
+					</div>
+				</div>
+				<div  class="col-12 content">
+					<div id="moveToCustomer" class="element row align-items-center justify-content-center">
+						<div class="col-5">
+							<img class="img-fluid" src="assets/img/icons/customers@2x.png" alt="Icon von Kunden">
+						</div>
+						<div class="col-7">
+							<div class="row align-items-end justify-content-center text-left">
+								<div class="col-12">
+									<p class="hightlight">
+										Kunden-
+									</p>
+								</div>
+								<div class="col-12">
+									zufriedenheit
+								</div>
+						</div>
+					</div>
+				</div>
+					<div id="moveToEverything" class="element row align-items-center justify-content-center">
+						<div class="col-5">
+							<img class="img-fluid" src="assets/img/icons/everything@2x.png" alt="Icon einem Computer">
+						</div>
+						<div class="col-7">
+							<div class="row align-items-end justify-content-center text-left">
+								<div class="col-12">
+									<p class="hightlight">
+										Alles
+									</p>
+								</div>
+								<div class="col-12">
+									auf einen Blick
+								</div>
+						</div>
+					</div>
+				</div>
+					<div id="moveToCosts" class="element row align-items-center justify-content-center">
+						<div class="col-5">
+							<img class="img-fluid" src="assets/img/icons/costs@2x.png" alt="Icon eines Sparschweines">
+						</div>
+						<div class="col-7">
+							<div class="row text-left">
+								<div class="col-12">
+									<p class="hightlight">
+										Kosten-
+									</p>
+								</div>
+								<div class="col-12">
+									ersparnis
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+			<!-- Slide #6 Customer / Kundenzufriedenheit -->
+			<div class="slide customer slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-6 col-lg-6">
+						<img class="img-fluid" src="assets/img/icons/customers@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="text-left">Marketingbudget</h2>
+							<h2 class="text-left">effizienter nutzen</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Die Erstellung vielfältiger und realistischer Medien
+in hochwertiger 3D-Qualität (Bildmaterial, Videos,
+Echtzeit 3D-Ansichten usw.) ist mit Hilfe von hoch
+automatisierten Prozessen mit geringem Aufwand
+und Einsatz möglich.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Slide #7 Everything / Alles auf einen Blick -->
+			<div class="slide everything slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-8 col-lg-6">
+						<img class="img-fluid" src="assets/img/icons/database@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="headline text-left">Flexibel dank</h2>
+							<h2 class="text-left">Datenbankmodell</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Die Ablage des kreierten Contents in einer
+Datenbank ermöglicht dessen Aufruf zu jeder
+Zeit, an jedem Ort und eine Einbindung in
+unterschiedliche Kanäle, sowie die Bewahrung
+der Daten nach aktuellen Sicherheitsrichtlinien.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Slide #8 Costs / Kostenersparnis -->
+			<div class="slide costs slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-6">
+						<img class="img-fluid" src="assets/img/icons/catalogue@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="text-left">Print-Kataloge</h2>
+							<h2 class="headline text-left">ablösen</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Die Funktionalität der BookBase eröffnet ganz
+neue Möglichkeiten in der Präsentation der
+Bücher für den Käufer.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="slide everything slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-8 col-lg-6">
+						<img class="img-fluid" src="assets/img/icons/quality@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="headline text-left">Interesse wecken</h2>
+							<h2 class="headline text-left">durch Qualität</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Der Transport von haptischen Effekten in
+Onlineshops lenkt die Aufmerksamkeit auf das
+Produkt und erhöht die Chancen auf einen Kauf.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="slide everything slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-8 col-lg-6">
+						<img class="img-fluid" src="assets/img/icons/efficiency@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="headline text-left">Effizienteres</h2>
+							<h2 class="headline text-left">Arbeiten</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Durch die realitätsnahe und digitale Ansicht der
+Medien können aufwendige und zeitintensive
+Andrucke verringert werden.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="slide everything slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-8 col-lg-6">
+						<img class="img-fluid" src="assets/img/icons/everything@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="headline text-left">Prozesse</h2>
+							<h2 class="text-left">beschleunigen</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Produktpräsentationen in unterschiedlichsten
+Variationen und Ausgabeformaten können innerhalb
+weniger Klicks erstellt werden. Wartezeiten und
+Abstimmungsaufwände reduzieren sich enorm.</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
 	<!-- 2___ Abschnitt Team -->
 
 	<!-- Slide #1 Übersicht -->
-		<div class="section section-team" id="section1">
+		<div class="section section_grey section-team" id="section1">
 			<div data-anchor="slide-team" id="slide-team" class="slide slide-team-overview">
 				<div class="content">
 					<h2>Team</h2>
@@ -427,6 +665,19 @@
 	$.fn.fullpage.moveTo(1, 6);
 	});
 
+</script>
+
+<script type="text/javascript">
+	$(document).on('click', '#moveToFurniture', function(){
+	$.fn.fullpage.moveTo(2, 0);
+	});
+	$(document).on('click', '#moveToBook', function(){
+	$.fn.fullpage.moveTo(3, 0);
+	});
+	$(document).on('click', '#moveToHome', function(){
+		$.fn.fullpage.destroy('all');
+		createFullpage();
+	});
 </script>
 
 
