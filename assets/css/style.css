@@ -89,7 +89,7 @@ p.hightlight{
 }
 
 a{
-  color: #fff;
+  color: #6E6E6E;
 
 }
 
@@ -145,6 +145,8 @@ h1.icon.big{
 #overlay .col-3{
   margin-bottom: 10vh;
 }
+
+
 
 .img-overlay{
   position: absolute;
@@ -355,22 +357,48 @@ display: flex;
 
 /* Slide Welcom */
 
-.slide.welcome h3{
-  font-size: 36px;
-  font-weight: bold;
+
+img.logos{
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+.slide.welcome.first .intro {
+  max-width: 1100px;
+}
+
+.slide.welcome.first .intro .content{
+  max-width: 1100px;
+  margin-bottom: 70px;
+}
+
+.slide.welcome.first .intro .big_headline{
+  font-size: 90px;
+}
+
+.slide.welcome.first .intro h3{
+  font-size: 20px;
 }
 
 .slide.welcome h4{
-  font-size: 40px;
-  font-weight: lighter;
+  font-size: 30px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
-.text-right h4, .text-right h3{
+.slide.welcome h5{
+  font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 0px;
+}
+
+.text-right h4, .text-right h5{
   text-align: right;
 }
 
-.text-left h4, .text-left h3{
-  text-left: left;
+.text-left h4, .text-left h5{
+  text-align: left;
 }
 
 .logo_welcome{
@@ -483,6 +511,11 @@ display: flex;
   url(../img/bg/wireframeLarge_multiply.png);
 }
 
+.slide.book .img-background{
+  background-image:
+  url(../img/bg/Buch4.png);
+}
+
 .slide.online .img-background{
   background-image:
   url(../img/bg/wireframeLarge_multiply.png);
@@ -539,7 +572,7 @@ display: flex;
 
 .navigation a{
     font-weight: 200;
-    color: #fff;
+    color: #6E6E6E;
 }
 
 .nav-item{

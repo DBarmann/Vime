@@ -109,7 +109,6 @@
 	<section class="navigation">
 
 		<ul id="menu" class="nav justify-content-center">
-
 			<li data-menuanchor="team" class="nav-item col-4">
 				<a class="nav-link" href="#contact">kontakt</a>
 			</li>
@@ -120,6 +119,7 @@
 				<a class="nav-link" href="#team">team</a>
 			</li>
 		</ul>
+
 	</section>
 	<section class="language">
 		<ul class="nav justify-content-center">
@@ -150,7 +150,7 @@
 					</div>
 				</div>
 			</div> -->
-			<div class="slide welcome">
+			<div class="slide welcome first">
 					<div class="intro">
 							<div class="col-12 content">
 								<h3>Welcome to</h3>
@@ -158,16 +158,16 @@
 								<h3 class="uppercase">Virtual Media<br></h1>
 						</div>
 					<div class="col-12 content">
-						<div class="row">
-							<div id="moveToFurniture" class="col-6 text-right logo_welcome">
-								<img class="pull-right" class="" src="assets/img/logos/FurnitureBase.png" />
-								<h3>FurnitureBase</h3>
-								<h4>Möbelvisualisierung</h4>
+						<div class="row justify-content-center">
+							<div id="moveToFurniture" class="col-5 text-right logo_welcome">
+								<img class="pull-right img-fluid logos" src="assets/img/logos/FurnitureBase.png" />
+								<h4>FurnitureBase</h4>
+								<h5>Möbelvisualisierung</h5>
 							</div>
-							<div id="moveToBook" class="col-6 text-left logo_welcome">
-								<img class="pull-left" src="assets/img/logos/BookBase.png" />
-								<h3>BookBase</h3>
-								<h4>Covervisualisierung</h4>
+							<div id="moveToBook" class="col-5 offset-md-1 text-left logo_welcome">
+								<img class="pull-left img-fluid logos" src="assets/img/logos/BookBase.png" />
+								<h4>BookBase</h4>
+								<h5>Covervisualisierung</h5>
 							</div>
 						</div>
 					</div>
@@ -357,12 +357,12 @@
 					</div>
 				</div>
 			</div> -->
-			<div class="slide welcome">
+			<div class="slide welcome book">
 				<div class="intro">
 					<div class="img-background">
 						<div class="col-12 content">
 							<h3>Willkommen bei</h3>
-							<h1>BookBase</h1>
+							<h1>Book Base</h1>
 					</div>
 				</div>
 				<div class="col-12 content">
@@ -373,7 +373,7 @@
 
 		<!-- Slide #5 Advantages / Ihre Vorteile -->
 
-		<div  data-anchor="test" class="slide advantages slide-style-list">
+		<div  data-anchor="test" class="slide book slide-style-list">
 			<div class="intro">
 				<div class="img-background">
 					<div class="col-12 content">
@@ -656,13 +656,26 @@ Abstimmungsaufwände reduzieren sich enorm.</p>
 </body>
 <script type="text/javascript">
 	$(document).on('click', '#moveToCustomer', function(){
-	$.fn.fullpage.moveTo(1, 4);
+	$.fn.fullpage.moveTo(2, 4);
 	});
 	$(document).on('click', '#moveToEverything', function(){
-	$.fn.fullpage.moveTo(1, 5);
+	$.fn.fullpage.moveTo(2, 5);
 	});
 	$(document).on('click', '#moveToCosts', function(){
-	$.fn.fullpage.moveTo(1, 6);
+	$.fn.fullpage.moveTo(2, 6);
+	});
+
+</script>
+
+<script type="text/javascript">
+	$(document).on('click', '#moveToCustomer', function(){
+	$.fn.fullpage.moveTo(2, 4);
+	});
+	$(document).on('click', '#moveToEverything', function(){
+	$.fn.fullpage.moveTo(2, 5);
+	});
+	$(document).on('click', '#moveToCosts', function(){
+	$.fn.fullpage.moveTo(2, 6);
 	});
 
 </script>
