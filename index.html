@@ -85,7 +85,17 @@
 			paddingTop: '50px',
 			dragAndMove: true,
 			slidesNavPosition: 'bottom',
-			navigationTooltips: ['firstSlide', 'secondSlide']
+			navigationTooltips: ['firstSlide', 'secondSlide'],
+			onLeave: function(origin, destination, direction){
+				var leavingSection = this;
+				if(destination == 2 || destination == 3 || destination == 5){
+					$("a").css('color', '#fff');
+					$("#moveToHome a img").attr("src","assets/img/logo_white.svg");
+				} else {
+					$("a").css('color', '#6E6E6E');
+					$("#moveToHome a img").attr("src","assets/img/logo.svg");
+				}
+			}
 		});
 	}
 		$(document).ready(function() {
@@ -374,63 +384,34 @@
 		<!-- Slide #5 Advantages / Ihre Vorteile -->
 
 		<div  data-anchor="test" class="slide book slide-style-list">
-			<div class="intro">
+			<div class="start_menu">
 				<div class="img-background">
 					<div class="col-12 content">
 						<h3>Ihre</h3>
 						<h1>Vorteile</h1>
 					</div>
 				</div>
-				<div  class="col-12 content">
-					<div id="moveToCustomer" class="element row align-items-center justify-content-center">
-						<div class="col-5">
-							<img class="img-fluid" src="assets/img/icons/customers@2x.png" alt="Icon von Kunden">
+				<div  class="col-12 content row">
+					<div class="col-md-6">
+						<div id="moveToMarketing" class="element row align-items-center justify-content-center">
+							<h2>Marketingbudget effizienter nutzen</h2>
 						</div>
-						<div class="col-7">
-							<div class="row align-items-end justify-content-center text-left">
-								<div class="col-12">
-									<p class="hightlight">
-										Kunden-
-									</p>
-								</div>
-								<div class="col-12">
-									zufriedenheit
-								</div>
+						<div id="moveToFlexible" class="element row align-items-center justify-content-center">
+							<h2>Flexibel dank Datenbankmodell</h2>
+						</div>
+						<div id="moveToPrint" class="element row align-items-center justify-content-center">
+							<h2>Print-Kataloge ablösen</h2>
 						</div>
 					</div>
-				</div>
-					<div id="moveToEverything" class="element row align-items-center justify-content-center">
-						<div class="col-5">
-							<img class="img-fluid" src="assets/img/icons/everything@2x.png" alt="Icon einem Computer">
+					<div class="col-md-6">
+						<div id="moveToQuality" class="element row align-items-center justify-content-center">
+							<h2>Interesse wecken durch Qualität</h2>
 						</div>
-						<div class="col-7">
-							<div class="row align-items-end justify-content-center text-left">
-								<div class="col-12">
-									<p class="hightlight">
-										Alles
-									</p>
-								</div>
-								<div class="col-12">
-									auf einen Blick
-								</div>
+						<div id="moveToEffizenz" class="element row align-items-center justify-content-center">
+							<h2>Effizienteres Arbeiten</h2>
 						</div>
-					</div>
-				</div>
-					<div id="moveToCosts" class="element row align-items-center justify-content-center">
-						<div class="col-5">
-							<img class="img-fluid" src="assets/img/icons/costs@2x.png" alt="Icon eines Sparschweines">
-						</div>
-						<div class="col-7">
-							<div class="row text-left">
-								<div class="col-12">
-									<p class="hightlight">
-										Kosten-
-									</p>
-								</div>
-								<div class="col-12">
-									ersparnis
-								</div>
-							</div>
+						<div id="moveToProcess" class="element row align-items-center justify-content-center">
+							<h2>Prozesse beschleunigen</h2>
 						</div>
 					</div>
 				</div>
@@ -442,7 +423,7 @@
 			<div class="slide customer slide-style-alt">
 				<div class="intro row justify-content-center">
 					<div class="col-6 col-lg-6">
-						<img class="img-fluid" src="assets/img/icons/customers@2x.png" />
+						<img class="img-fluid" src="assets/img/icons/marketingbudget@2x.png" />
 					</div>
 						<div class="col-12 content">
 							<h2 class="text-left">Marketingbudget</h2>
@@ -533,7 +514,7 @@ Andrucke verringert werden.</p>
 			<div class="slide everything slide-style-alt">
 				<div class="intro row justify-content-center">
 					<div class="col-8 col-lg-6">
-						<img class="img-fluid" src="assets/img/icons/everything@2x.png" />
+						<img class="img-fluid" src="assets/img/icons/process@2x.png" />
 					</div>
 						<div class="col-12 content">
 							<h2 class="headline text-left">Prozesse</h2>
@@ -684,8 +665,23 @@ Abstimmungsaufwände reduzieren sich enorm.</p>
 	$(document).on('click', '#moveToFurniture', function(){
 	$.fn.fullpage.moveTo(2, 0);
 	});
-	$(document).on('click', '#moveToBook', function(){
-	$.fn.fullpage.moveTo(3, 0);
+	$(document).on('click', '#moveToMarketing', function(){
+	$.fn.fullpage.moveTo(3, 2);
+	});
+	$(document).on('click', '#moveToFlexible', function(){
+	$.fn.fullpage.moveTo(2, 3);
+	});
+	$(document).on('click', '#moveToPrint', function(){
+	$.fn.fullpage.moveTo(2, 4);
+	});
+	$(document).on('click', '#moveToQuality', function(){
+	$.fn.fullpage.moveTo(2, 5);
+	});
+	$(document).on('click', '#moveToEffizenz', function(){
+	$.fn.fullpage.moveTo(3, 6);
+	});
+	$(document).on('click', '#moveToProcess', function(){
+	$.fn.fullpage.moveTo(3, 7);
 	});
 	$(document).on('click', '#moveToHome', function(){
 		$.fn.fullpage.destroy('all');
@@ -694,6 +690,25 @@ Abstimmungsaufwände reduzieren sich enorm.</p>
 </script>
 
 
+<div id="moveToMarketing" class="element row align-items-center justify-content-center">
+	<h3>Marketingbudget effizienter nutzen</h3>
+</div>
+<div id="moveToFlexible" class="element row align-items-center justify-content-center">
+	<h3>Flexibel dank Datenbankmodell</h3>
+</div>
+<div id="moveToPrint" class="element row align-items-center justify-content-center">
+	<h3>Print-Kataloge ablösen</h3>
+</div>
+<div id="moveToQuality" class="element row align-items-center justify-content-center">
+	<h3>Interesse wecken durch Qualität</h3>
+</div>
+<div id="moveToEffizenz" class="element row align-items-center justify-content-center">
+	<h3>Effizienteres Arbeiten</h3>
+</div>
+<div id="moveToProcess" class="element row align-items-center justify-content-center">
+	<h3>Prozesse beschleunigen</h3>
+</div>
+
 <script type="text/javascript">
 	$(document).on('click', '#moveToPerson', function(){
 		$.each (team_members, function (index, value){
@@ -701,5 +716,6 @@ Abstimmungsaufwände reduzieren sich enorm.</p>
 		})
 	});
 </script>
+
 
 </html>

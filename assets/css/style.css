@@ -425,6 +425,19 @@ img.logos{
 }
 
 
+/* Slide Book */
+
+.book h2{
+  font-size: 25px;
+  margin-top: 25px;
+  max-width: 300px;
+}
+
+.book .start_menu .content{
+  max-width: 900px;
+}
+
+
 /* Slide Detail */
 
 
