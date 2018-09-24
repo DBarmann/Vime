@@ -481,6 +481,11 @@ img.logos{
   url(../img/team/detail/andreas_employee_detail.png);
 }
 
+.slide-team-member.team-daria{
+  background-image:
+  url(../img/team/detail/daria_employee_detail.png);
+}
+
 .slide-team-member.team-adrian{
   background-image:
   url(../img/team/detail/adrian_employee_detail.png);
@@ -695,14 +700,34 @@ img.logos{
 
 /* Orientation-Lock */
 
-@media (max-width: 400px){
+@media (max-width: 420px){
    .section-kontakt .bottom_nav{
         bottom: 21vh;
     }
 
     .section_orange .start_menu h2{
       margin-top: 0px;
-      font-size: 3.1vh;
+      font-size: 2.5vh;
+    }
+
+    .logo_welcome, .logo_welcome h5 {
+      text-align: center!important;
+    }
+
+    .logo_welcome{
+      margin-bottom: 20px;
+    }
+
+    .logo_welcome h4{
+      display: none;
+    }
+
+    .slide.welcome.first .intro .content{
+      margin-bottom: 20px;
+    }
+
+    img.logos{
+      max-width: 18vw;
     }
 
     .fp-controlArrow {
