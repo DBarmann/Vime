@@ -197,11 +197,11 @@
 				</div>
 			</div> -->
 			<div class="slide welcome">
-				<div class="intro">
-					<div class="img-background">
-						<div class="col-12 content">
+				<div class="intro img-background">
+					<div class="">
+						<div class="col-12">
 							<h3>Willkommen bei</h3>
-							<h1>Furniture Base</h1>
+							<h1 class="max">FurnitureBase</h1>
 					</div>
 				</div>
 				<div class="col-12 content">
@@ -369,11 +369,11 @@
 				</div>
 			</div> -->
 			<div class="slide welcome book">
-				<div class="intro">
-					<div class="img-background">
-						<div class="col-12 content">
+				<div class="intro img-background">
+					<div class="">
+						<div class="col-12">
 							<h3>Willkommen bei</h3>
-							<h1>Book Base</h1>
+							<h1 class="max">BookBase</h1>
 					</div>
 				</div>
 				<div class="col-12 content">
@@ -672,6 +672,9 @@ Abstimmungsaufwände reduzieren sich enorm.</p>
 <script type="text/javascript">
 	$(document).on('click', '#moveToFurniture', function(){
 	$.fn.fullpage.moveTo(2, 0);
+	});
+	$(document).on('click', '#moveToBook', function(){
+	$.fn.fullpage.moveTo(3, 0);
 	});
 	$(document).on('click', '#moveToMarketing', function(){
 	$.fn.fullpage.moveTo(3, 2);

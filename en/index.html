@@ -7,10 +7,8 @@
 
 	<link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="../favicon.png" sizes="96x96">
-	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 	<link rel="stylesheet" type="text/css" href="../assets/fullpage/jquery.fullPage.css" />
-
-	<!--link href="https://fonts.googleapis.com/css?family=Prompt:200,400,600" rel="stylesheet"-->
 
 	<link rel="stylesheet" type="text/css" href="../assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
@@ -25,30 +23,28 @@
 		</script>
 	<![endif]-->
 
-	<link href="https://use.fontawesome.com/releases/v5.0.2/css/all.css" rel="stylesheet">
+	<link href="../assets/fontawesome/css/fontawesome-all.css" rel="stylesheet">
+
 	<script src="../assets/jquery/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
+	var team_members = $();
 
 	function randomTeam(){
 
-		var team_members = $();
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-adrian'><div class='content'><div class='member-text'><h3 class='subline'>Adrian Kevin</h3><h2 class='lastname'>Equisoain</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-elisa'><div class='content'><div class='member-text'><h3 class='subline'>Elisa</h3><h2 class='lastname'>Wohlfahrt</h2><h3 class='subline'>User Experience<br />Designer</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-daria'><div class='content'><div class='member-text'><h3 class='subline'>Daria</h3><h2 class='lastname'>Tamm</h2><h3 class='subline'>User Experience<br />Designer</h3></div></div></div></div>");
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-andreas'><div class='content'><div class='member-text'><h3 class='subline'>Andreas</h3><h2 class='lastname'>Diebold</h2><h3 class='subline'>Head of Vime</h3></div></div></div></div>");
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-goetz'><div class='content'><div class='member-text'><h3 class='subline'>Götz Moritz</h3><h2 class='lastname'>Bongartz</h2><h3 class='subline'>Technischer Leiter</h3></div></div></div></div>");
 		/*team_members = team_members.add("<div class='slide'><div class='slide-team-member team-ruediger'><div class='content'><div class='member-text'><h3 class='subline'>Rüdiger</h3><h2 class='lastname'>Wenski</h2><h3 class='subline'>Systemingenieur</h3></div></div></div></div>");*/
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-mykolas'><div class='content'><div class='member-text'><h3 class='subline'>Mykolas</h3><h2 class='lastname'>Parulskis</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
-		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-meike'><div class='content'><div class='member-text'><h3 class='subline'>Meike</h3><h2 class='lastname'>Beine</h2><h3 class='subline'>Kundenmanagerin</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-meike'><div class='content'><div class='member-text'><h3 class='subline'>Meike</h3><h2 class='lastname'>Eley</h2><h3 class='subline'>Kundenmanagerin</h3></div></div></div></div>");
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-xueya'><div class='content'><div class='member-text'><h3 class='subline'>Xueya</h3><h2 class='lastname'>Long</h2><h3 class='subline'>Systemingenieur</h3></div></div></div></div>");
 
 		team_members.sort(function() { return 0.5 - Math.random() });
 	 	$(".team-detail").append(team_members);
 
-	};
-
-	$(document).ready(function() {
-			randomTeam();
-	});
+	}
 
 	function moveTeam(position){
 
@@ -68,13 +64,19 @@
 	};
 
 
+	$(document).ready(function() {
+			randomTeam();
+	})
+
+
+
 	</script>
 	<script type="text/javascript" src="../assets/fullpage/jquery.fullPage.js"></script>
 	<script type="text/javascript">
 	function createFullpage(){
 
 		$('#fullpage').fullpage({
-			anchors: ['home', 'team', 'contact'],
+			anchors: ['home', 'furniture', 'book', 'team', 'contact'],
 			menu: '#menu',
 			controlArrows: true,
 			verticalCentered: true,
@@ -84,7 +86,17 @@
 			paddingTop: '50px',
 			dragAndMove: true,
 			slidesNavPosition: 'bottom',
-			navigationTooltips: ['firstSlide', 'secondSlide']
+			navigationTooltips: ['firstSlide', 'secondSlide'],
+			onLeave: function(origin, destination, direction){
+				var leavingSection = this;
+				if(destination == 2 || destination == 3 ){
+					$("a").css('color', '#fff');
+					$("#moveToHome a img").attr("src","../assets/img/logo_white.svg");
+				} else {
+					$("a").css('color', '#6E6E6E');
+					$("#moveToHome a img").attr("src","../assets/img/logo.svg");
+				}
+			}
 		});
 	}
 		$(document).ready(function() {
@@ -106,22 +118,24 @@
 
 <body>
 	<section class="navigation">
+
 		<ul id="menu" class="nav justify-content-center">
 			<li data-menuanchor="team" class="nav-item col-4">
 				<a class="nav-link" href="#contact">contact</a>
 			</li>
-			<li data-menuanchor="home" class="nav-item col-4">
+			<li data-menuanchor="home" class="nav-item col-4" id="moveToHome">
 				<a class="nav-link active" href="#home"><img class="img-fluid"  style="height: 30px" src="../assets/img/logo.svg"></a>
 			</li>
 			<li data-menuanchor="contact" class="nav-item col-4">
 				<a class="nav-link" href="#team">team</a>
 			</li>
 		</ul>
+
 	</section>
 	<section class="language">
 		<ul class="nav justify-content-center">
 			<li class="nav-item col-6">
-				<a class="nav-link" href="../">DE / <span class="active">EN</span></a>
+				<a class="nav-link" href="../">DE / <span class="active">EN</span> </a>
 			</li>
 		</ul>
 	</section>
@@ -131,7 +145,7 @@
 				<img class="img-fluid" src="../assets/img/icons/rotation.png" />
 			</div>
 			<div class="col-12">
-				<h2>Turn your device.</h2>
+				<h2>Please turn your device.</h2>
 			</div>
 		</div>
 	</div>
@@ -147,30 +161,32 @@
 					</div>
 				</div>
 			</div> -->
-			<div class="slide welcome">
-				<div class="intro">
-						<div class="col-12 content">
-							<h3>Welcome to</h3>
-							<h1 class="big_headline uppercase">Vime</h1>
-							<h3 class="uppercase">Virtual Media<br></h1>
-					</div>
-				<div class="col-12 content">
-					<div class="row">
-						<div class="col-6">
-							<img src="../assets/img/logos/FurnitureBase.png" />
-							<h3>FurniturBase</h3>
+			<div class="slide welcome first">
+					<div class="intro">
+							<div class="col-12 content">
+								<h3>Welcome to</h3>
+								<h1 class="big_headline uppercase">Vime</h1>
+								<h3 class="uppercase">Virtual Media<br></h1>
 						</div>
-						<div class="col-6">
-							<img src="../assets/img/logos/BookBase.png" />
-							<h3>BookBase</h3>
+					<div class="col-12 content">
+						<div class="row justify-content-center">
+							<div id="moveToFurniture" class="col-md-5 text-right logo_welcome">
+								<img class="pull-right img-fluid logos" src="../assets/img/logos/FurnitureBase.png" />
+								<h4>FurnitureBase</h4>
+								<h5>Möbelvisualisierung</h5>
+							</div>
+							<div id="moveToBook" class="col-md-5 offset-md-1 text-left logo_welcome">
+								<img class="pull-left img-fluid logos" src="../assets/img/logos/BookBase.png" />
+								<h4>BookBase</h4>
+								<h5>Covervisualisierung</h5>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		</div>
 
-		<div class="section" sect id="section0">
+		<div class="section" id="section0">
 			<!-- <div class="slide">
 				<div class="row">
 					<div class="layer content">
@@ -180,16 +196,29 @@
 					</div>
 				</div>
 			</div> -->
+			<div class="slide welcome">
+				<div class="intro img-background">
+					<div class="">
+						<div class="col-12">
+							<h3>Welcome to</h3>
+							<h1 class="max">FurnitureBase</h1>
+					</div>
+				</div>
+				<div class="col-12 content">
+					<p class="big_text">You know that situation? There is this unique piece of furniture in your shop but the picture on your website hardly reflects the quality</p>
+				</div>
+			</div>
+		</div>
 		<div class="slide online">
 			<div class="intro">
 				<div class="img-background">
 					<div class="col-12 content">
-							<h3>Welcome to</h3>
-							<h1>Furniture Base</h1>
+							<h3>Revolutionize Your</h3>
+							<h1>Online Presence</h1>
 						</div>
 					</div>
 					<div class="col-12 content">
-						<p>Sie kennen das? Sie haben dieses wunderbar geschreinerte Möbelstück in ihrem Geschäft, aber online kommt die Qualität „nicht so ganz rüber”?</p>
+						<p>The VIME workflow transforms your product into a digital 3D version and enables a new form of online shopping. Thanks to the resulting high-resolution content, your customer gets the impression of physically standing in your shop and being able to evaluate the structure, color and workmanship of your product. This way, one can virtually set the desired chair into the living room and instantly modify its different features, view pictures or enjoy videos of the product.</p>
 					</div>
 				</div>
 			</div>
@@ -206,9 +235,11 @@
 					</div>
 				</div>
 			</div>
+
+
 			<!-- Slide #5 Advantages / Ihre Vorteile -->
 
-			<div class="slide advantages slide-style-list">
+			<div  data-anchor="test" class="slide advantages slide-style-list">
 				<div class="intro">
 					<div class="img-background">
 						<div class="col-12 content">
@@ -225,7 +256,7 @@
 								<div class="row align-items-end justify-content-center text-left">
 									<div class="col-12">
 										<p class="hightlight">
-											Customer
+											Customer-
 										</p>
 									</div>
 									<div class="col-12">
@@ -316,7 +347,7 @@
 							<h1 class="headline text-left">Savings</h1>
 						</div>
 					<div class="col-12 content">
-						<p> You carry a product in ten, hundred or thousand different versions and want to display each in your online shop without having to take a separate photo of every possible modification? In this case, we have good news for you: Your product can be captured directly on-site only once and your customer can select the full range of styles online with only one click. On top of this, the digital 3D animations can be easily integrated as pictures into your website and – in your desired environment – into your print catalog.</p>
+						<p>You carry a product in ten, hundred or thousand different versions and want to display each in your online shop without having to take a separate photo of every possible modification? In this case, we have good news for you: Your product can be captured directly on-site only once and your customer can select the full range of styles online with only one click. On top of this, the digital 3D animations can be easily integrated as pictures into your website and – in your desired environment – into your print catalog.</p>
 					</div>
 				</div>
 			</div>
@@ -333,38 +364,176 @@
 					</div>
 				</div>
 			</div> -->
-			<div class="slide online">
-				<div class="intro">
-					<div class="img-background">
-						<div class="col-12 content">
-								<h3>Welcome to</h3>
-								<h1>Book Base</h1>
-							</div>
-						</div>
-						<div class="col-12 content">
-							<p>The VIME workflow transforms your product into a digital 3D version and enables a new form of online shopping. Thanks to the resulting high-resolution content, your customer gets the impression of physically standing in your shop and being able to evaluate the structure, color and workmanship of your product. This way, one can virtually set the desired chair into the living room and instantly modify its different features, view pictures or enjoy videos of the product.</p>
-						</div>
+			<div class="slide welcome book">
+				<div class="intro img-background">
+					<div class="">
+						<div class="col-12">
+							<h3>Welcome to</h3>
+							<h1 class="max">BookBase</h1>
 					</div>
 				</div>
-		<div class="slide online">
-			<div class="intro">
+				<div class="col-12 content">
+					<p class="big_text">Sie kennen das? Sie haben dieses wunderbar geschreinerte Möbelstück in ihrem Geschäft, aber online kommt die Qualität „nicht so ganz rüber”?</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Slide #5 Advantages / Ihre Vorteile -->
+
+		<div  data-anchor="test" class="slide book slide-style-list">
+			<div class="start_menu">
 				<div class="img-background">
 					<div class="col-12 content">
-							<h3>Revolutionize Your</h3>
-							<h1>Online Presence</h1>
+						<h3>Your</h3>
+						<h1>Gains</h1>
+					</div>
+				</div>
+				<div  class="col-12 content row">
+					<div class="col-md-6">
+						<div id="moveToMarketing" class="element row align-items-center justify-content-center">
+							<h2>Use marketing budget more efficiently</h2>
+						</div>
+						<div id="moveToFlexible" class="element row align-items-center justify-content-center">
+							<h2>Flexibility through data base model</h2>
+						</div>
+						<div id="moveToPrint" class="element row align-items-center justify-content-center">
+							<h2>Replace print catalogues</h2>
 						</div>
 					</div>
-					<div class="col-12 content">
-						<p>The VIME workflow transforms your product into a digital 3D version and enables a new form of online shopping. Thanks to the resulting high-resolution content, your customer gets the impression of physically standing in your shop and being able to evaluate the structure, color and workmanship of your product. This way, one can virtually set the desired chair into the living room and instantly modify its different features, view pictures or enjoy videos of the product.</p>
+					<div class="col-md-6">
+						<div id="moveToQuality" class="element row align-items-center justify-content-center">
+							<h2>Spark interest through increased quality</h2>
+						</div>
+						<div id="moveToEffizenz" class="element row align-items-center justify-content-center">
+							<h2>Work more efficiently</h2>
+						</div>
+						<div id="moveToProcess" class="element row align-items-center justify-content-center">
+							<h2>Accelerate processes</h2>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
+
+			<!-- Slide #6 Customer / Kundenzufriedenheit -->
+			<div class="slide customer slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-6 col-lg-6">
+						<img class="img-fluid" src="../assets/img/icons/marketingbudget@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="text-left">Use marketing budget</h2>
+							<h2 class="text-left">more efficiently</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Creation of versatile and realistic media
+in high quality 3D (graphical material,
+videos, realtime 3D views etc.) by highly
+automated processes with little effort are
+possible.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Slide #7 Everything / Alles auf einen Blick -->
+			<div class="slide everything slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-8 col-lg-6">
+						<img class="img-fluid" src="../assets/img/icons/database@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="headline text-left">Flexibility through</h2>
+							<h2 class="text-left">data base model</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Repository of the created content in a
+data base enables its access at any time
+and any place and involvement in
+multichannel publishing as well as the
+preservation of the data according to
+current security regulations.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Slide #8 Costs / Kostenersparnis -->
+			<div class="slide costs slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-6">
+						<img class="img-fluid" src="../assets/img/icons/catalogue@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="text-left">Replace </h2>
+							<h2 class="headline text-left">print catalogues</h2>
+						</div>
+					<div class="col-12 content">
+						<p>The functionality of the BookBase opens
+up new possibilities in the presentation
+of the books to the customer.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="slide everything slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-8 col-lg-6">
+						<img class="img-fluid" src="../assets/img/icons/quality@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="headline text-left">Spark interest through</h2>
+							<h2 class="headline text-left">increased quality</h2>
+						</div>
+					<div class="col-12 content">
+						<p>The usage of haptic effects in online
+shops attracts attention to the product
+and raises chances for a purchase.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="slide everything slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-8 col-lg-6">
+						<img class="img-fluid" src="../assets/img/icons/efficiency@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="headline text-left">Work more</h2>
+							<h2 class="headline text-left">efficiently</h2>
+						</div>
+					<div class="col-12 content">
+						<p>A realistic and digital view of media
+reduces costly and time-consuming press
+proof.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="slide everything slide-style-alt">
+				<div class="intro row justify-content-center">
+					<div class="col-8 col-lg-6">
+						<img class="img-fluid" src="../assets/img/icons/process@2x.png" />
+					</div>
+						<div class="col-12 content">
+							<h2 class="headline text-left">Accelerate</h2>
+							<h2 class="text-left">processes</h2>
+						</div>
+					<div class="col-12 content">
+						<p>Products‘ presentation in different
+variations and output formats can be
+done within a few clicks. Waiting time
+and coordination work can be reduced.
+</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
 	<!-- 2___ Abschnitt Team -->
 
 	<!-- Slide #1 Übersicht -->
-		<div class="section section-team" id="section1">
+		<div class="section section_grey section-team" id="section1">
 			<div data-anchor="slide-team" id="slide-team" class="slide slide-team-overview">
 				<div class="content">
 					<h2>Team</h2>
@@ -381,8 +550,15 @@
 								<h3 style="transform: translateX(-40%);">Rüdiger</h3>
 								<h3 style="transform: translateX(-10%);">Wenski</h3>
 							</div>
-							<img class="img-fluid" src="../assets/img/team/overview/ruediger_employee_overview@2x.png">
+							<img class="img-fluid" src="../../assets/img/team/overview/ruediger_employee_overview@2x.png">
 						</div> -->
+						<div class="team-item col-6 col-lg-3" onclick="moveTeam('daria')">
+							<div class="overlay_text">
+								<h3 style="transform: translateX(-50%);">Daria</h3>
+								<h3 style="transform: translateX(-30%);">Tamm</h3>
+							</div>
+							<img class="img-fluid" src="../assets/img/team/overview/daria_employee_overview@2x.png">
+						</div>
 						<div class="team-item col-6 col-lg-3" onclick="moveTeam('goetz')">
 							<div class="overlay_text">
 								<h3 style="transform: translateX(-50%);">Götz Moritz</h3>
@@ -400,7 +576,7 @@
 						<div class="team-item col-6 col-lg-3" onclick="moveTeam('meike')">
 							<div class="overlay_text">
 								<h3 style="transform: translateX(-20%);">Meike</h3>
-								<h3 style="transform: translateX(80%);">Beine</h3>
+								<h3 style="transform: translateX(80%);">Eley</h3>
 							</div>
 							<img class="img-fluid" src="../assets/img/team/overview/meike_employee_overview@2x.png">
 						</div>
@@ -437,7 +613,7 @@
 			<div class="team-detail">
 			</div>
 		</div>
-		<div class="section section-kontakt" id="section2">
+		<div class="section section-kontakt section_grey" id="section2">
 			<div class="content row">
 				<div class="row">
 						<div class="col-12">
@@ -453,12 +629,10 @@
 				</div>
 				<div class="bottom_nav row">
 					<div class="col-12">
-						<div class="part row">
-							<a class="col-12" href="https://www.mohnmedia.de">Mohn Media</a>
-							<a class="col-12" href="https://www.bertelsmann.de/">Bertelsmann</a>
-						</div>
-						<div class="part row">
-							<a class="col-12" href="https://www.mohnmedia.de/impressum/">Imprint</a>
+						<div class="part">
+							<a href="https://www.mohnmedia.de">Mohn Media</a><br />
+							<a href="https://www.bertelsmann.de/">Bertelsmann</a><br />
+							<a href="https://www.mohnmedia.de/impressum/">Imprint</a>
 						</div>
 				</div>
 				</div>
@@ -469,16 +643,87 @@
 </body>
 <script type="text/javascript">
 	$(document).on('click', '#moveToCustomer', function(){
-	$.fn.fullpage.moveTo(1, 4);
+	$.fn.fullpage.moveTo(2, 4);
 	});
 	$(document).on('click', '#moveToEverything', function(){
-	$.fn.fullpage.moveTo(1, 5);
+	$.fn.fullpage.moveTo(2, 5);
 	});
 	$(document).on('click', '#moveToCosts', function(){
-	$.fn.fullpage.moveTo(1, 6);
+	$.fn.fullpage.moveTo(2, 6);
 	});
 
+</script>
 
+<script type="text/javascript">
+	$(document).on('click', '#moveToCustomer', function(){
+	$.fn.fullpage.moveTo(2, 4);
+	});
+	$(document).on('click', '#moveToEverything', function(){
+	$.fn.fullpage.moveTo(2, 5);
+	});
+	$(document).on('click', '#moveToCosts', function(){
+	$.fn.fullpage.moveTo(2, 6);
+	});
+
+</script>
+
+<script type="text/javascript">
+	$(document).on('click', '#moveToFurniture', function(){
+	$.fn.fullpage.moveTo(2, 0);
+	});
+	$(document).on('click', '#moveToBook', function(){
+	$.fn.fullpage.moveTo(3, 0);
+	});
+	$(document).on('click', '#moveToMarketing', function(){
+	$.fn.fullpage.moveTo(3, 2);
+	});
+	$(document).on('click', '#moveToFlexible', function(){
+	$.fn.fullpage.moveTo(2, 3);
+	});
+	$(document).on('click', '#moveToPrint', function(){
+	$.fn.fullpage.moveTo(2, 4);
+	});
+	$(document).on('click', '#moveToQuality', function(){
+	$.fn.fullpage.moveTo(2, 5);
+	});
+	$(document).on('click', '#moveToEffizenz', function(){
+	$.fn.fullpage.moveTo(3, 6);
+	});
+	$(document).on('click', '#moveToProcess', function(){
+	$.fn.fullpage.moveTo(3, 7);
+	});
+	$(document).on('click', '#moveToHome', function(){
+		$.fn.fullpage.destroy('all');
+		createFullpage();
+	});
+</script>
+
+
+<div id="moveToMarketing" class="element row align-items-center justify-content-center">
+	<h3>Marketingbudget effizienter nutzen</h3>
+</div>
+<div id="moveToFlexible" class="element row align-items-center justify-content-center">
+	<h3>Flexibel dank Datenbankmodell</h3>
+</div>
+<div id="moveToPrint" class="element row align-items-center justify-content-center">
+	<h3>Print-Kataloge ablösen</h3>
+</div>
+<div id="moveToQuality" class="element row align-items-center justify-content-center">
+	<h3>Interesse wecken durch Qualität</h3>
+</div>
+<div id="moveToEffizenz" class="element row align-items-center justify-content-center">
+	<h3>Effizienteres Arbeiten</h3>
+</div>
+<div id="moveToProcess" class="element row align-items-center justify-content-center">
+	<h3>Prozesse beschleunigen</h3>
+</div>
+
+<script type="text/javascript">
+	$(document).on('click', '#moveToPerson', function(){
+		$.each (team_members, function (index, value){
+					console.log(index);
+		})
+	});
 </script>
 
 
