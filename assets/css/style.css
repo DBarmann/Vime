@@ -198,11 +198,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbb00', end
 
 .section_grey{
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f3f3f3+0,bebebe+100,7db9e8+100 */
-  background: #f3f3f3; /* Old browsers */
-  background: -moz-linear-gradient(top, #f3f3f3 0%, #bebebe 100%, #7db9e8 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, #f3f3f3 0%,#bebebe 100%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, #f3f3f3 0%,#bebebe 100%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f3f3f3', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ededed+100 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #ededed 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #ffffff 0%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #ffffff 0%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
 }
 
 .content{
@@ -234,7 +235,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbb00', end
 }
 
 .slide-style-list .element{
-  margin-bottom: 20px;
+  margin-bottom: 3vh;
 }
 
 /* Slide Style Alternative */
@@ -568,11 +569,18 @@ img.logos{
 
 .element{
   cursor: pointer;
-  text-align: center;;
+
+}
+
+.element h3{
+text-align: left;
+font-size: 20px;
+vertical-align: middle;
 }
 
 .element img{
   display: block;
+  width: 100%;
 }
 
 /* Navigation */
@@ -706,6 +714,26 @@ img.logos{
 
 /* Orientation-Lock */
 
+@media (max-height: 667px){
+  .start_menu .col-4{
+    display: none;
+  }
+
+  .start_menu .col-8{
+    flex: 0 0 100%;
+    max-width: 100%;
+
+  }
+
+  .slide-style-list .element{
+    margin-bottom: 2vh;
+  }
+
+  .start_menu h3{
+        text-align: center;
+  }
+}
+
 @media (max-width: 420px){
    .section-kontakt .bottom_nav{
         bottom: 21vh;
@@ -734,6 +762,10 @@ img.logos{
 
     img.logos{
       max-width: 18vw;
+    }
+
+    .content{
+      padding: 20px;
     }
 
     .fp-controlArrow {
