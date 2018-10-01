@@ -320,6 +320,7 @@ display: flex;
 
 .section-team h3{
   color: #fff;
+  text-shadow: 0px 2px 10px #333;
 }
 
 .member-text{
@@ -457,6 +458,11 @@ img.logos{
 /* Slide Detail */
 
 
+.slide-team-member h3, .slide-team-member h2{
+  color: #7C7C7C;
+  text-shadow: none;
+}
+
 .slide-team-member .fp-tableCell{
   vertical-align: bottom;
 }
@@ -576,6 +582,7 @@ img.logos{
 text-align: left;
 font-size: 20px;
 vertical-align: middle;
+font-weight: 900;
 }
 
 .element img{
