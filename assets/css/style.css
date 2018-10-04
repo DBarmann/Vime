@@ -635,7 +635,7 @@ font-weight: 900;
 .fp-controlArrow {
     border: none;
     position: absolute;
-    top: 100%;
+    top: 99%;
     width: 35px!important; /* This can be added here so you don't have to set a width and height 2 times for each arrow, this will create one width for both arrows */
     height: 35px!important; /* This does the same as above */
     z-index: 4;

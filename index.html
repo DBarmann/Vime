@@ -91,10 +91,15 @@
 				var leavingSection = this;
 				if(destination == 2 || destination == 3 ){
 					$("a").css('color', '#fff');
-					$("a").css('color', '#fff');
+					$(".shuffle").css('color', '#fff');
+					$(".fp-controlArrow.fp-prev").css('background-image', 'url(assets/img/icons/links.png)');
+					$(".fp-controlArrow.fp-next").css('background-image', 'url(assets/img/icons/rechts.png)');
 					$("#moveToHome a img").attr("src","assets/img/logo_white.svg");
 				} else {
 					$("a").css('color', '#6E6E6E');
+					$(".shuffle").css('color', '#6E6E6E');
+					$(".fp-controlArrow.fp-prev").css('background-image', 'url(assets/img/icons/links_grau.png)');
+					$(".fp-controlArrow.fp-next").css('background-image', 'url(assets/img/icons/rechts_grau.png)');
 					$("#moveToHome a img").attr("src","assets/img/logo.svg");
 				}
 			}
