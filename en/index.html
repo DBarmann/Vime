@@ -3,7 +3,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>Vime - Home</title>
+
+	<meta name="description" content="Vime. Virtual Media. Sie kennen das? Sie haben dieses wunderbar geschreinerte Möbelstück in ihrem Geschäft, aber online kommt die Qualität „ nicht so ganz ... ">
+	<meta name="keywords" content="Vime, Multimedia, Media, Augmented, Reality, BookBase, FurnitureBase, Book, Furniture, 3D, Graphic, Visual">
 
 	<link rel="icon" type="image/png" href="../favicon.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="../favicon.png" sizes="96x96">
@@ -35,11 +39,11 @@
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-elisa'><div class='content'><div class='member-text'><h3 class='subline'>Elisa</h3><h2 class='lastname'>Wohlfahrt</h2><h3 class='subline'>User Experience<br />Designer</h3></div></div></div></div>");
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-daria'><div class='content'><div class='member-text'><h3 class='subline'>Daria</h3><h2 class='lastname'>Tamm</h2><h3 class='subline'>User Experience<br />Designer</h3></div></div></div></div>");
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-andreas'><div class='content'><div class='member-text'><h3 class='subline'>Andreas</h3><h2 class='lastname'>Diebold</h2><h3 class='subline'>Head of Vime</h3></div></div></div></div>");
-		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-goetz'><div class='content'><div class='member-text'><h3 class='subline'>Götz Moritz</h3><h2 class='lastname'>Bongartz</h2><h3 class='subline'>Technischer Leiter</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-goetz'><div class='content'><div class='member-text'><h3 class='subline'>Götz Moritz</h3><h2 class='lastname'>Bongartz</h2><h3 class='subline'>Technical Lead</h3></div></div></div></div>");
 		/*team_members = team_members.add("<div class='slide'><div class='slide-team-member team-ruediger'><div class='content'><div class='member-text'><h3 class='subline'>Rüdiger</h3><h2 class='lastname'>Wenski</h2><h3 class='subline'>Systemingenieur</h3></div></div></div></div>");*/
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-mykolas'><div class='content'><div class='member-text'><h3 class='subline'>Mykolas</h3><h2 class='lastname'>Parulskis</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
-		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-meike'><div class='content'><div class='member-text'><h3 class='subline'>Meike</h3><h2 class='lastname'>Eley</h2><h3 class='subline'>Kundenmanagerin</h3></div></div></div></div>");
-		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-xueya'><div class='content'><div class='member-text'><h3 class='subline'>Xueya</h3><h2 class='lastname'>Long</h2><h3 class='subline'>Systemingenieur</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-meike'><div class='content'><div class='member-text'><h3 class='subline'>Meike</h3><h2 class='lastname'>Eley</h2><h3 class='subline'>Client manager</h3></div></div></div></div>");
+		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-xueya'><div class='content'><div class='member-text'><h3 class='subline'>Xueya</h3><h2 class='lastname'>Long</h2><h3 class='subline'>Systems engineer</h3></div></div></div></div>");
 
 		team_members.sort(function() { return 0.5 - Math.random() });
 	 	$(".team-detail").append(team_members);
@@ -91,9 +95,15 @@
 				var leavingSection = this;
 				if(destination == 2 || destination == 3 ){
 					$("a").css('color', '#fff');
+					$(".shuffle").css('color', '#fff');
+					$(".fp-controlArrow.fp-prev").css('background-image', 'url(../assets/img/icons/links.png)');
+					$(".fp-controlArrow.fp-next").css('background-image', 'url(../assets/img/icons/rechts.png)');
 					$("#moveToHome a img").attr("src","../assets/img/logo_white.svg");
 				} else {
 					$("a").css('color', '#6E6E6E');
+					$(".shuffle").css('color', '#6E6E6E');
+					$(".fp-controlArrow.fp-prev").css('background-image', 'url(../assets/img/icons/links_grau.png)');
+					$(".fp-controlArrow.fp-next").css('background-image', 'url(../assets/img/icons/rechts_grau.png)');
 					$("#moveToHome a img").attr("src","../assets/img/logo.svg");
 				}
 			}
@@ -389,26 +399,56 @@
 					</div>
 				</div>
 				<div  class="col-12 content row">
-					<div class="col-md-6">
-						<div id="moveToMarketing" class="element row align-items-center justify-content-center">
-							<h2>Use marketing budget more efficiently</h2>
+					<div class="col-md-5">
+						<div id="moveToMarketing" class="element row">
+								<div class="col-4">
+									<img class="img-fluid" src="../assets/img/icons/marketingbudget@2x.png" />
+								</div>
+								<div class="col-8 align-self-center">
+									<h3>Use marketing budget more efficiently</h3>
+									</div>
+								</div>
+						<div id="moveToFlexible" class="element row">
+							<div class="col-4">
+								<img class="img-fluid" src="../assets/img/icons/database@2x.png" />
+							</div>
+							<div class="col-8 align-self-center">
+							<h3>Flexibility through data base model</h3>
+							</div>
 						</div>
-						<div id="moveToFlexible" class="element row align-items-center justify-content-center">
-							<h2>Flexibility through data base model</h2>
-						</div>
-						<div id="moveToPrint" class="element row align-items-center justify-content-center">
-							<h2>Replace print catalogues</h2>
+						<div id="moveToPrint" class="element row">
+							<div class="col-4">
+								<img class="img-fluid" src="../assets/img/icons/catalogue@2x.png" />
+							</div>
+							<div class="col-8 align-self-center">
+							<h3>Replace print catalogues</h3>
+							</div>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<div id="moveToQuality" class="element row align-items-center justify-content-center">
-							<h2>Spark interest through increased quality</h2>
+					<div class="col-md-5 offset-md-2">
+						<div id="moveToQuality" class="element row">
+							<div class="col-4">
+								<img class="img-fluid" src="../assets/img/icons/quality@2x.png" />
+							</div>
+							<div class="col-8 align-self-center">
+							<h3>Spark interest through increased quality</h3>
+							</div>
 						</div>
-						<div id="moveToEffizenz" class="element row align-items-center justify-content-center">
-							<h2>Work more efficiently</h2>
+						<div id="moveToEffizenz" class="element row">
+							<div class="col-4">
+								<img class="img-fluid" src="../assets/img/icons/efficiency@2x.png" />
+							</div>
+							<div class="col-8 align-self-center">
+							<h3>Work more efficiently</h3>
+							</div>
 						</div>
-						<div id="moveToProcess" class="element row align-items-center justify-content-center">
-							<h2>Accelerate processes</h2>
+						<div id="moveToProcess" class="element row">
+							<div class="col-4">
+								<img class="img-fluid" src="../assets/img/icons/process@2x.png" />
+							</div>
+							<div class="col-8 align-self-center">
+							<h3>Accelerate processes</h3>
+						</div>
 						</div>
 					</div>
 				</div>
@@ -678,13 +718,13 @@ and coordination work can be reduced.
 	$.fn.fullpage.moveTo(3, 2);
 	});
 	$(document).on('click', '#moveToFlexible', function(){
-	$.fn.fullpage.moveTo(2, 3);
+	$.fn.fullpage.moveTo(3, 3);
 	});
 	$(document).on('click', '#moveToPrint', function(){
-	$.fn.fullpage.moveTo(2, 4);
+	$.fn.fullpage.moveTo(3, 4);
 	});
 	$(document).on('click', '#moveToQuality', function(){
-	$.fn.fullpage.moveTo(2, 5);
+	$.fn.fullpage.moveTo(3, 5);
 	});
 	$(document).on('click', '#moveToEffizenz', function(){
 	$.fn.fullpage.moveTo(3, 6);
