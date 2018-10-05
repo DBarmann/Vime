@@ -107,7 +107,7 @@ h1.big_headline{
 
 
 h1.max{
-  font-size: 7vw;
+  font-size: 90px;
 }
 
 h3{
@@ -741,7 +741,15 @@ font-weight: 900;
   }
 }
 
+@media (max-width: 640px){
+	h1.max{
+	  font-size: 10vw;
+	}
+}
+
 @media (max-width: 420px){
+
+
    .section-kontakt .bottom_nav{
         bottom: 21vh;
     }
