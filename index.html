@@ -31,9 +31,10 @@
 
 	<script src="assets/jquery/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
-	var team_members = $();
+
 
 	function randomTeam(){
+		var team_members = $();
 
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-adrian'><div class='content'><div class='member-text'><h3 class='subline'>Adrian Kevin</h3><h2 class='lastname'>Equisoain</h2><h3 class='subline'>3D Artist</h3></div></div></div></div>");
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-elisa'><div class='content'><div class='member-text'><h3 class='subline'>Elisa</h3><h2 class='lastname'>Wohlfahrt</h2><h3 class='subline'>User Experience<br />Designer</h3></div></div></div></div>");
@@ -46,6 +47,7 @@
 		team_members = team_members.add("<div class='team-slide slide'><div class='slide-team-member team-xueya'><div class='content'><div class='member-text'><h3 class='subline'>Xueya</h3><h2 class='lastname'>Long</h2><h3 class='subline'>Systemingenieur</h3></div></div></div></div>");
 
 		team_members.sort(function() { return 0.5 - Math.random() });
+		$(".team-detail").empty();
 	 	$(".team-detail").append(team_members);
 
 	}
